@@ -16,7 +16,13 @@ export default class ProjectsDAO{
             )
         }
 
-        console.log(projects);
+        
+        // console.log(query);
+    }
+
+    static async getProjects(){
+        let query = await projects.find({});
+        return query.toArray();
     }
 
 }
