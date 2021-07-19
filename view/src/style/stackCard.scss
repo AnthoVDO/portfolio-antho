@@ -1,4 +1,14 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
 .project__stack {
     display: flex;
     flex-direction: row;
+    .project__stack__card {
+        width: 20%;
+        overflow: hidden;
+    }
 }
