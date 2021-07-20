@@ -7,8 +7,26 @@
 .project__stack {
     display: flex;
     flex-direction: row;
+    overflow-x: visible;
+    position: relative;
+    //transform: translate(-400px);
     .project__stack__card {
-        width: 20%;
-        overflow: hidden;
+        margin-right: 5%;
+        margin-left: 25px;
+        padding: 10px;
     }
+}
+
+
+/* Front End Carousel */
+
+.left__frontend,
+.right__frontend {
+    position: absolute;
+    height: 150px;
+    top: 100px;
+}
+
+.right__frontend {
+    right: 0;
 }
