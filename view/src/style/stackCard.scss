@@ -1,32 +1,48 @@
-.project {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-}
-
-.project__stack {
-    display: flex;
-    flex-direction: row;
-    overflow-x: visible;
-    position: relative;
-    //transform: translate(-400px);
-    .project__stack__card {
-        margin-right: 5%;
-        margin-left: 25px;
-        padding: 10px;
-    }
-}
-
+// .project {
+//     display: flex;
+//     flex-direction: column;
+//     width: 80%;
+// }
+// .project__stack {
+//     display: flex;
+//     flex-direction: row;
+//     overflow-x: visible;
+//     position: relative;
+//     //transform: translate(-400px);
+//     .project__stack__card {
+//         margin-right: 5%;
+//         margin-left: 25px;
+//         padding: 10px;
+//     }
+// }
 
 /* Front End Carousel */
 
-.left__frontend,
-.right__frontend {
-    position: absolute;
-    height: 150px;
-    top: 100px;
+// .left__frontend,
+// .right__frontend {
+//     position: absolute;
+//     height: 150px;
+//     top: 100px;
+// }
+// .right__frontend {
+//     right: 0;
+// }
+.project__frontend {
+    position: relative;
+    overflow: hidden;
 }
 
-.right__frontend {
-    right: 0;
+.project__frontend__slideshow {}
+
+.project__frontend__slideshow__itemContainer {
+    float: left;
+}
+
+.project__frontend__slideshow__itemContainer__item {}
+
+.project__frontend__slideshow::after {
+    //avoid to loose div high due to float
+    content: '';
+    clear: both;
+    display: table;
 }

@@ -11,9 +11,13 @@ const StackCard = (props) => {
         return "./screenshot-small/"+path+".png"
     }
 
+    const myClass = props.addClass+" project__stack__card"
+    const nestedClass = props.addClass+"__item"
+
 
     return (
-        <div className="project__stack__card">
+        <div className={myClass}>
+        <div className={nestedClass}>
         <img src={cleanUrlToGetTheScreenShot(props.element.link)} alt="" />
         <h4 className="project__stack__card__name">{props.element.name}</h4>
         <p className="project__stack__card__description">{props.element.description}</p>
@@ -22,7 +26,7 @@ const StackCard = (props) => {
             <a href={props.element.link} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__link">Check the project</a>
             <a href={props.element.github} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__github">Check the repo</a>
         </div>
-        
+        </div>
         </div>
     );
 };
