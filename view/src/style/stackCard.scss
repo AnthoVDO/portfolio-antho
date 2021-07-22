@@ -1,48 +1,86 @@
-// .project {
-//     display: flex;
-//     flex-direction: column;
-//     width: 80%;
-// }
-// .project__stack {
-//     display: flex;
-//     flex-direction: row;
-//     overflow-x: visible;
-//     position: relative;
-//     //transform: translate(-400px);
-//     .project__stack__card {
-//         margin-right: 5%;
-//         margin-left: 25px;
-//         padding: 10px;
-//     }
-// }
-
-/* Front End Carousel */
-
-// .left__frontend,
-// .right__frontend {
-//     position: absolute;
-//     height: 150px;
-//     top: 100px;
-// }
-// .right__frontend {
-//     right: 0;
-// }
-.project__frontend {
-    position: relative;
-    overflow: hidden;
+.project__stack__card__name {
+    text-align: center;
 }
 
-.project__frontend__slideshow {}
+.itemContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 
-.project__frontend__slideshow__itemContainer {
+.itemContainer__item {
+    position: relative;
+    border-radius: 15px;
+}
+
+.project__stack__card__technologie {
+    text-align: center;
+}
+
+// Mouse hover function
+.project__stack__card__a {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgb(61, 61, 61);
+    opacity: 0.8;
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    p {
+        text-align: center;
+        color: white;
+        background-color: rgb(39, 38, 38);
+    }
+    a {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border-radius: 15px;
+        margin: 10px;
+    }
+}
+
+.active {
+    display: flex;
+}
+
+// Slideshow
+.slideshow {
+    position: relative;
+    // overflow: hidden;
+}
+
+.slideshow__container {
+    transition: transform 0.3s;
+    transform: translate3d(0, 0, 0);
+}
+
+.itemContainer {
     float: left;
 }
 
-.project__frontend__slideshow__itemContainer__item {}
-
-.project__frontend__slideshow::after {
+.slideshow__container::after {
     //avoid to loose div high due to float
     content: '';
     clear: both;
     display: table;
+}
+
+.prevButton,
+.nextButton {
+    position: absolute;
+    top: 40%;
+    height: 20%;
+}
+
+.nextButton {
+    right: 0;
 }

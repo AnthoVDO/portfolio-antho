@@ -25,17 +25,19 @@ const Projects = () => {
     
     
 
-    // Create the slideshow for the frontend
+    // Create the slideshow class
 
     class SlideShow {
         constructor(element, options = {}){
             this.element = element
             this.options = Object.assign({}, {
                 slidesToScroll: 1,
-                slidesVisibles: 1
+                slidesVisibles: 1,
+                parentClass:null
             }, options)
 
             this.children = [].slice.call(element.children)
+            this.currentItem = 0;
             this.container = element.firstElementChild;
             
             
@@ -53,12 +55,45 @@ const Projects = () => {
         }
 
         createNavigation() {
-            console.log(this.element)
-            let prevButton = Array.from(this.element).filter(e=> e.className === "prevButton")
-            let nextButton = Array.from(this.element).filter(e=> e.className === "nextButton")
-            console.log(prevButton);
-            console.log(nextButton);
+            let prevButton = document.querySelector(this.options.parentClass+" .prevButton");
+            let nextButton = document.querySelector(this.options.parentClass+" .nextButton");
+            prevButton.addEventListener("click", this.next.bind(this))
+            nextButton.addEventListener("click", this.prev.bind(this))
         }
+
+        next(){
+            this.gotoItem(this.currentItem + this.options.slidesToScroll)
+        }
+
+        prev(){
+            this.gotoItem(this.currentItem - this.options.slidesToScroll)
+        }
+
+        gotoItem(index){
+
+            if(index>0){
+                if(index>0+this.options.slidesToScroll-1){
+                    index = this.items.length - this.options.slidesVisibles;
+                index = -index
+                }else{
+                    index = 0;
+                }   
+            }
+            if(index<-this.items.length+this.options.slidesVisibles){
+                if(index<-this.items.length+1){
+                    index = 0
+                }else{
+                    index= -this.items.length + this.options.slidesVisibles;
+                }
+            }
+            let translateX = index * 100 / this.items.length
+            this.container.style.transform = 'translate3d('+ translateX +'%, 0,0)'
+            this.currentItem = index;
+        }
+
+
+
+
     }
 
     
@@ -68,10 +103,19 @@ const Projects = () => {
         
         
         await getProject();
+        /* create slideshow frontend */
         await new SlideShow(document.querySelector(".project__frontend"), {
         slidesToScroll: 3,
-        slidesVisibles: 3
+        slidesVisibles: 3,
+        parentClass: ".project__frontend"
     })
+
+        /* creat slideshow backend */
+        await new SlideShow(document.querySelector(".project__backend"), {
+            slidesToScroll: 3,
+            slidesVisibles: 3,
+            parentClass: ".project__backend"
+        })
 
 
     },[])
@@ -82,47 +126,62 @@ const Projects = () => {
 
     return (
         <div className="project" >
+
+        {/* front end */}
+
         <h3 className="project__stack__title">Front end projects</h3>
-        <div className="project__stack project__frontend">
-        
-        <div className="project__frontend__slideshow">
-            {
-                projects.map(e=>{
-                  if(e.stack === "FrontEnd") return <StackCard element={e} addClass='project__frontend__slideshow__itemContainer'/>
-                  else{
-                      return null
-                  }
-                })
-            
-                }
+        <div className="project__stack project__frontend slideshow">
+            <div className="project__frontend__slideshow slideshow__container">
+                {
+                    projects.map(e=>{
+                    if(e.stack === "FrontEnd") return <StackCard element={e} addClass='itemContainer'/>
+                    else{
+                        return null
+                    }
+                    })
+                
+                    }
+            </div>
+            <button className="left__frontend prevButton"> <FaArrowCircleLeft/> </button> 
+            <button className="right__frontend nextButton"> <FaArrowCircleRight/> </button>   
         </div>
-         <button className="left__frontend prevButton"> <FaArrowCircleLeft/> </button> 
-         <button className="right__frontend nextButton"> <FaArrowCircleRight/> </button>   
-        </div>
+
+        {/* Back end */}
+
         <h3 className="project__stack__title">Back end projects</h3>
-        <div className="project__stack project__backend">
-        {
-                projects.map(e=>{
-                  if(e.stack === "BackEnd") return <StackCard element={e} />
-                  else{
-                      return null
-                  }
-                })
-            
-            }
+        <div className="project__stack project__backend slideshow">
+            <div className="project__backend__slideshow slideshow__container">
+                {
+                    projects.map(e=>{
+                    if(e.stack === "BackEnd") return <StackCard element={e} addClass='itemContainer'/>
+                    else{
+                        return null
+                    }
+                    })
+                
+                }
+            </div>
+            <button className="left__backend prevButton"> <FaArrowCircleLeft/> </button> 
+            <button className="right__backend nextButton"> <FaArrowCircleRight/> </button>
         </div>
+
+        {/* Full stack */}
+
         <h3 className="project__stack__title">Full Stack</h3>
-        <div className="project__stack project__fullstack">
-        {
-                projects.map(e=>{
-                  if(e.stack === "Full") return <StackCard element={e} />
-                  else{
-                      return null
-                  }
-                })
+            <div className="project__stack project__fullstack slideshow">
+            <div className="project__fullstack__slideshow slideshow__container">
+                {
+                    projects.map(e=>{
+                    if(e.stack === "Full") return <StackCard element={e} addClass='itemContainer'/>
+                    else{
+                        return null
+                    }
+                    })
+                
+                }
+            </div>
             
-            }
-        </div>
+            </div>
         
              
         </div>

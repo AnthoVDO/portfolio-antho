@@ -60,7 +60,7 @@ const Stack = () => {
 
 
     return (
-        <div>
+        <div className="stack">
         {
             Object.entries(stackList).map(element =>{
                 return <Icon href={element[1].href} alt={element[1].alt} src={element[1].src} />
