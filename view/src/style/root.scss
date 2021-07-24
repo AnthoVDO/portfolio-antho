@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+// Color
+$primary:#3c6e71;
+$mainBG:#213b4d;
+$bodyBG:#fbfdff;
+$backgroundColor: #284B63;
+$textColor: #D9D9D9;
+$secondary: #353535;
+$third: #d8e0e0;
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Chivo', sans-serif;
+    background-color: $bodyBG;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
-// Color
