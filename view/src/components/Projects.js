@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import StackCard from './StackCard';
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import TitleToShow from './TitleToShow';
 
 const axios = require('axios');
         
 
 
-const Projects = () => {
+const Projects = (props) => {
 
     const url = "http://localhost:8080/api/v1/portfolio";
     const [projects, setProjects] = useState([]);
@@ -120,6 +121,8 @@ const Projects = () => {
 
     },[])
 
+    console.log()
+
 
 
     
@@ -129,7 +132,7 @@ const Projects = () => {
 
         {/* front end */}
 
-        <h3 className="project__stack__title">Front end projects</h3>
+        < TitleToShow specialClass="project__stack__title" text="Front end projects" />
         <div className="project__stack project__frontend slideshow">
             <div className="project__frontend__slideshow slideshow__container">
                 {
@@ -147,8 +150,9 @@ const Projects = () => {
         </div>
 
         {/* Back end */}
-
-        <h3 className="project__stack__title">Back end projects</h3>
+        
+        < TitleToShow specialClass="project__stack__title" text="Back end projects" />
+        {/* <h3 className="project__stack__title"></h3> */}
         <div className="project__stack project__backend slideshow">
             <div className="project__backend__slideshow slideshow__container">
                 {
@@ -166,8 +170,10 @@ const Projects = () => {
         </div>
 
         {/* Full stack */}
+        
 
-        <h3 className="project__stack__title">Full Stack</h3>
+        < TitleToShow specialClass="project__stack__title" text="Full Stack" />
+        {/* <h3 className="project__stack__title">Full Stack</h3> */}
             <div className="project__stack project__fullstack slideshow">
             <div className="project__fullstack__slideshow slideshow__container">
                 {

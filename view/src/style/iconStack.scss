@@ -1,9 +1,14 @@
 .stack {
     margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .stack__icon {
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
     border-left: 5px solid $backgroundColor;
     border-right: 5px solid $backgroundColor;
@@ -11,9 +16,7 @@
     background-color: $third;
     &:hover {
         padding: 20px;
-        transition: padding 0.3s;
-        transition: box-shadow 0.3s;
-        -webkit-box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-        box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        transform: rotate(360deg);
+        transition: box-shadow 0.3s, padding 0.3s, transform 0.3s ease-in-out;
     }
 }

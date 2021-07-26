@@ -1,9 +1,11 @@
 import React from 'react';
+import TitleToShow from './TitleToShow';
 
 const About = () => {
     return (
         <div className="about">
-        <h3 className="about__title">About</h3>
+        < TitleToShow specialClass="about__title" text="About" />
+        {/* <h3 className="about__title">About</h3> */}
         <p className="about__description">
         I learned to code with FreeCodeCamp
 
