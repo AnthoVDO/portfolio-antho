@@ -1,26 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 const TitleToShow = (props) => {
 
-    const [componentPositionPixel, setComponentPositionPixel] = useState(null)
 
     useEffect(()=>{
-        
-        console.log(componentPositionPixel);
+        AOS.init({
+            duration: 2000,
+            offset:300,
+            throttleDelay: 1000
+        });
+    }, []);
 
-    }, [])
-
-    const componentPosition = (e) => {
-        if(e!=null){
-           console.log(props.text+" position :"+e.getBoundingClientRect().top); 
-           setComponentPositionPixel(e.getBoundingClientRect().top) ;
-        }
-        }
-
-    // className={props.specialClass}
 
     return (
-        <h3 className="hiddenComponent" ref={el => {componentPosition(el)}}>
+        <h3 
+        data-aos="fade-up"
+        className={props.specialClass}>
         {props.text}
         </h3>
     );

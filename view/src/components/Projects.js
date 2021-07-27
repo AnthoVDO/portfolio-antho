@@ -121,8 +121,6 @@ const Projects = (props) => {
 
     },[])
 
-    console.log()
-
 
 
     
@@ -132,7 +130,7 @@ const Projects = (props) => {
 
         {/* front end */}
 
-        < TitleToShow specialClass="project__stack__title" text="Front end projects" />
+        < TitleToShow specialClass="project__stack__title" text="Front end projects" screenPosition={props.screenPosition} />
         <div className="project__stack project__frontend slideshow">
             <div className="project__frontend__slideshow slideshow__container">
                 {
@@ -151,7 +149,7 @@ const Projects = (props) => {
 
         {/* Back end */}
         
-        < TitleToShow specialClass="project__stack__title" text="Back end projects" />
+        < TitleToShow specialClass="project__stack__title" text="Back end projects" screenPosition={props.screenPosition} />
         {/* <h3 className="project__stack__title"></h3> */}
         <div className="project__stack project__backend slideshow">
             <div className="project__backend__slideshow slideshow__container">
@@ -172,7 +170,7 @@ const Projects = (props) => {
         {/* Full stack */}
         
 
-        < TitleToShow specialClass="project__stack__title" text="Full Stack" />
+        < TitleToShow specialClass="project__stack__title" text="Full Stack" screenPosition={props.screenPosition} />
         {/* <h3 className="project__stack__title">Full Stack</h3> */}
             <div className="project__stack project__fullstack slideshow">
             <div className="project__fullstack__slideshow slideshow__container">
