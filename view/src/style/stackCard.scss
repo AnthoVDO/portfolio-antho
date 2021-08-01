@@ -17,6 +17,14 @@
 .itemContainer__item {
     position: relative;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .item__preview {
+        width: 256px;
+        height: 192px;
+    }
 }
 
 .project__stack__card__technologie {

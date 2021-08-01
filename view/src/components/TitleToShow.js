@@ -6,11 +6,17 @@ const TitleToShow = (props) => {
 
 
     useEffect(()=>{
-        AOS.init({
+
+        window.addEventListener('load', function() { 
+            AOS.init({
             duration: 2000,
-            offset:300,
-            throttleDelay: 1000
-        });
+            offset:150,
+            }
+            
+        ) 
+        console.log("aos init")
+    });
+
     }, []);
 
 

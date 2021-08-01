@@ -63,7 +63,17 @@ const Stack = () => {
         <div className="stack">
         {
             Object.entries(stackList).map(element =>{
-                return <Icon href={element[1].href} alt={element[1].alt} src={element[1].src} />
+                return (
+                    <Icon 
+                    href={element[1].href} 
+                    alt={element[1].alt} 
+                    src={element[1].src} 
+                    width='35px'
+                    height="35px"
+
+                    />
+                )
+                
             })
         }
 
