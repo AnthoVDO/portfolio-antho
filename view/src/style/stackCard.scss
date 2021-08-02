@@ -56,12 +56,18 @@
         letter-spacing: 0.15em;
     }
     a {
-        background-color: $primary;
-        color: white;
         padding: 10px;
         border-radius: 15px;
         margin: 10px;
         opacity: 1;
+    }
+    .project__stack__card__a__link {
+        background-color: $primary;
+        color: white;
+    }
+    .project__stack__card__a__github {
+        background-color: white;
+        color: $primary;
     }
 }
 
@@ -99,5 +105,11 @@
 }
 
 .nextButton {
-    right: 0;
+    right: -15px;
+    cursor: url("./css-png/right-arrow.png"), auto;
+}
+
+.prevButton {
+    cursor: url("./css-png/left-arrow.png"), auto;
+    left: -15px;
 }
