@@ -1,22 +1,27 @@
 .contact {
     width: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact__container {
-    width: 25%;
-    margin-left: 12.5%;
-    padding: 15px;
-    &::after {
-        content: "";
-        background-color: $backgroundColor;
-        width: 50%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 10px;
-        border-radius: 0px 0px 40px 0px;
-    }
+    // width: 25%;
+    // padding: 15px;
+    // grid-column: 0 1;
+    // grid-row: 0 1;
+    // &::after {
+    //     content: "";
+    //     background-color: $backgroundColor;
+    //     width: 345px;
+    //     height: 98px;
+    //     position: absolute;
+    //     top: 0;
+    //     right: 10px;
+    //     border-radius: 0px 0px 40px 0px;
+    // }
 }
 
 .contact__container__list {
@@ -29,4 +34,5 @@
 .contact__container__list__item {
     display: block;
     list-style-type: none;
+    margin: 20px;
 }

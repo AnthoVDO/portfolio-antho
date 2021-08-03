@@ -34,8 +34,18 @@ function App() {
   return (
     <div className="App" >
     <div className="container" >
+    <div className="top">
       <Header/>
+
+      <div className="top__profilePicture">
+        <img src="./img/anthoVDO.jpg" alt="antho's profile picture" srcset=""  className="top__profilePicture__picture"/>
+      </div>
+
+      
+      
       <Contact />
+    </div>
+      
       <Stack />
       <Projects screenPosition={screenPosition}/>
       <About screenPosition={screenPosition}/>
