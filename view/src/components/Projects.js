@@ -12,19 +12,37 @@ const Projects = (props) => {
     const url = "http://localhost:8080/api/v1/portfolio";
     const [projects, setProjects] = useState([]);
 
-    // Call the API to get the projects
+    
+    
+
+    useEffect(()=>{
+        
+        
+        // Call the API to get the projects
 
     const getProject = async () => {
         try{
             const response = await axios.get(url);
-            setProjects(response.data)
+            await setProjects(response.data)
+
+            /* create slideshow frontend */
+
+            await new SlideShow(document.querySelector(".project__frontend"), {
+                slidesToScroll: 3,
+                slidesVisibles: 3,
+                parentClass: ".project__frontend"
+            })
+        
+                /* creat slideshow backend */
+            await new SlideShow(document.querySelector(".project__backend"), {
+                    slidesToScroll: 3,
+                    slidesVisibles: 3,
+                    parentClass: ".project__backend"
+                })
         }catch(e){
             console.log("Fail to fetch data from back end project: "+e);
         }
     }
-
-    
-    
 
     // Create the slideshow class
 
@@ -96,29 +114,14 @@ const Projects = (props) => {
 
 
     }
-
-    
-
-
-    useEffect(async ()=>{
         
         
-        await getProject();
-        /* create slideshow frontend */
-        await new SlideShow(document.querySelector(".project__frontend"), {
-        slidesToScroll: 3,
-        slidesVisibles: 3,
-        parentClass: ".project__frontend"
-    })
-
-        /* creat slideshow backend */
-        await new SlideShow(document.querySelector(".project__backend"), {
-            slidesToScroll: 3,
-            slidesVisibles: 3,
-            parentClass: ".project__backend"
-        })
-
-
+        
+        
+        
+        
+        getProject();    
+        
     },[])
 
 
@@ -130,7 +133,7 @@ const Projects = (props) => {
 
         {/* front end */}
 
-        < TitleToShow specialClass="project__stack__title" text="Front end projects" screenPosition={props.screenPosition} />
+        < TitleToShow specialClass="project__stack__title" text="Front end projects" />
         <div className="project__stack project__frontend slideshow">
             <div className="project__frontend__slideshow slideshow__container">
                 {
@@ -149,8 +152,7 @@ const Projects = (props) => {
 
         {/* Back end */}
         
-        < TitleToShow specialClass="project__stack__title" text="Back end projects" screenPosition={props.screenPosition} />
-        {/* <h3 className="project__stack__title"></h3> */}
+        < TitleToShow specialClass="project__stack__title" text="Back end projects"/>
         <div className="project__stack project__backend slideshow">
             <div className="project__backend__slideshow slideshow__container">
                 {
@@ -170,8 +172,7 @@ const Projects = (props) => {
         {/* Full stack */}
         
 
-        < TitleToShow specialClass="project__stack__title" text="Full Stack" screenPosition={props.screenPosition} />
-        {/* <h3 className="project__stack__title">Full Stack</h3> */}
+        < TitleToShow specialClass="project__stack__title" text="Full Stack"/>
             <div className="project__stack project__fullstack slideshow">
             <div className="project__fullstack__slideshow slideshow__container">
                 {

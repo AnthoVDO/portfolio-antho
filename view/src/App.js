@@ -4,32 +4,10 @@ import Header from './components/Header';
 import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
-import {useState, useEffect} from "react";
 
 function App() {
 
-  const [scrolling, setScrolling] = useState(false);
-  const [scrollTop, setScrollTop] = useState(0);
-  const [screenPosition, setScreenPosition] = useState(0);
-
-  useEffect(() => {
-
-      const onScrollDown = (e) => {
-      let windowPosition = window.pageYOffset;
-      if(windowPosition > scrollTop){
-          setScreenPosition(windowPosition);
-          setScrolling(false)
-      }
-      setScrollTop(windowPosition <= 0 ? 0 : windowPosition);
-      }
-
-      window.addEventListener('scroll', onScrollDown);
-      return () => window.removeEventListener("scroll", onScrollDown)
-
-
-  }, [scrollTop]);
-
-
+  
 
   return (
     <div className="App" >
@@ -38,7 +16,7 @@ function App() {
       <Header/>
 
       <div className="top__profilePicture">
-        <img src="./img/anthoVDO.jpg" alt="antho's profile picture" srcset=""  className="top__profilePicture__picture"/>
+        <img src="./img/anthoVDO.jpg" alt="antho's profile"  className="top__profilePicture__picture"/>
       </div>
 
       
@@ -47,8 +25,8 @@ function App() {
     </div>
       
       <Stack />
-      <Projects screenPosition={screenPosition}/>
-      <About screenPosition={screenPosition}/>
+      <Projects />
+      <About />
       
     </div>
     </div>
