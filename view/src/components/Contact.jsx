@@ -16,7 +16,7 @@ const Contact = () => {
             <ul className="contact__container__list">
             <li className="contact__container__list__item"><a href="https://github.com/AnthoVDO" target="_blank" rel="noreferrer noopener"> <FaGithub/> </a></li>
             <li className="contact__container__list__item"><a href="https://twitter.com/didacteantho" target="_blank" rel="noreferrer noopener"> <ImTwitter/> </a></li>
-            <li className="contact__container__list__item"><a href="" target="_blank" rel="noreferrer noopener"> <SiMinutemailer/> </a></li>
+            <li className="contact__container__list__item"><a href="mailto:anthony.vdo@hotmail.be" target="_blank" rel="noreferrer noopener"> <SiMinutemailer/> </a></li>
             </ul>
 
         </IconContext.Provider>

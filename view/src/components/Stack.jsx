@@ -1,6 +1,6 @@
 import React from 'react';
 import "../../public/icons/react.svg"
-import Icon from './Icon.js';
+import Icon from './Icon.jsx';
 
 const Stack = () => {
     const path = "./icons/"
@@ -70,6 +70,7 @@ const Stack = () => {
                     src={element[1].src} 
                     width='35px'
                     height="35px"
+                    key={element[1].alt+"reactKeyStack"}
 
                     />
                 )

@@ -14,7 +14,6 @@ const TitleToShow = (props) => {
             }
             
         ) 
-        console.log("aos init")
     });
 
     }, []);

@@ -21,6 +21,18 @@ const Projects = (props) => {
         // Call the API to get the projects
 
     const getProject = async () => {
+
+        const windowsWidth = window.innerWidth;
+        let numberOfSlide;
+        if(windowsWidth>1100)numberOfSlide = 3
+        else{
+        if(windowsWidth > 700)numberOfSlide=2
+        else{
+            numberOfSlide=1
+        }    
+        }
+        
+
         try{
             const response = await axios.get(url);
             await setProjects(response.data)
@@ -28,15 +40,15 @@ const Projects = (props) => {
             /* create slideshow frontend */
 
             await new SlideShow(document.querySelector(".project__frontend"), {
-                slidesToScroll: 3,
-                slidesVisibles: 3,
+                slidesToScroll: numberOfSlide,
+                slidesVisibles: numberOfSlide,
                 parentClass: ".project__frontend"
             })
         
                 /* creat slideshow backend */
             await new SlideShow(document.querySelector(".project__backend"), {
-                    slidesToScroll: 3,
-                    slidesVisibles: 3,
+                    slidesToScroll: numberOfSlide,
+                    slidesVisibles: numberOfSlide,
                     parentClass: ".project__backend"
                 })
         }catch(e){
@@ -138,7 +150,9 @@ const Projects = (props) => {
             <div className="project__frontend__slideshow slideshow__container">
                 {
                     projects.map(e=>{
-                    if(e.stack === "FrontEnd") return <StackCard element={e} addClass='itemContainer'/>
+                    if(e.stack === "FrontEnd"){
+                        return <StackCard element={e} addClass='itemContainer' key={e._id} />
+                    } 
                     else{
                         return null
                     }
@@ -157,7 +171,7 @@ const Projects = (props) => {
             <div className="project__backend__slideshow slideshow__container">
                 {
                     projects.map(e=>{
-                    if(e.stack === "BackEnd") return <StackCard element={e} addClass='itemContainer'/>
+                    if(e.stack === "BackEnd") return <StackCard element={e} addClass='itemContainer' key={e._id}/>
                     else{
                         return null
                     }
@@ -177,7 +191,7 @@ const Projects = (props) => {
             <div className="project__fullstack__slideshow slideshow__container">
                 {
                     projects.map(e=>{
-                    if(e.stack === "Full") return <StackCard element={e} addClass='itemContainer'/>
+                    if(e.stack === "Full") return <StackCard element={e} addClass='itemContainer' key={e._id}/>
                     else{
                         return null
                     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from './Icon.js';
+import Icon from './Icon.jsx';
 
 const StackCard = (props) => {
 
@@ -82,7 +82,7 @@ const StackCard = (props) => {
         },
     }
 
-       console.log(props.element.technologie)
+    //    console.log(props.element.technologie)
        
     
 
@@ -109,6 +109,7 @@ const StackCard = (props) => {
                   src={stackList[element[1]].src}
                   width="20px"
                   height="20px"
+                  key={stackList[element[1]].alt+"reactKeyStack"+props.element.name}
 
 
                   />
