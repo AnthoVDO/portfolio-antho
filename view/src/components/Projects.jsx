@@ -8,8 +8,9 @@ const axios = require('axios');
 
 
 const Projects = (props) => {
-
-    const url = "http://localhost:8080/api/v1/portfolio";
+    
+    // const url = "http://localhost:8080/api/v1/portfolio";
+    const url = "https://anthovdo-s-portfolio.herokuapp.com/api/v1/portfolio"
     const [projects, setProjects] = useState([]);
 
     
