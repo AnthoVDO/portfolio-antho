@@ -17,3 +17,9 @@
         width: 50%;
     }
 }
+
+@media(max-width:500px) {
+    .top {
+        grid-template-columns: 60% 40%;
+    }
+}
