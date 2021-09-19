@@ -12,7 +12,20 @@ const About = () => {
         I learned to code as a self taught with the help of Free Code Camp,
         Google, Youtube, Stack Overflow, ...
       </p>
-      <h4>My skills</h4>
+      <h4>Soft skills</h4>
+      <p>I worked as a field technician in IT, more precisely in antennas, for 5 years.</p>
+      <p>My job was to control alarms, change or repair parts, configure 2G, 3G, 4G cards and transmissions. I also had to make reports to send to subcontractors.
+      also helped to manage various projects such as TomorrowLand, Rock Werchter, Pukklepops, Spa-Francorchamps, ...</p>
+      <p>The telecommunication world is a bit like the development world, it changes fast. That's why I'm constantly learning.</p>
+      <p>This allowed me to acquire skills like:</p>
+      <ul>
+        <li>autonomy (I worked alone and had to manage my interventions)</li>
+        <li>stock management</li>
+        <li>report writing (I sent detailed reports with photos during my interventions to be able to invoice the customer or send subcontractors)</li>
+        <li>communication (I worked in repeaters which were sometimes located in companies)</li>
+        <li>understanding and acting on priority interventions (I had to manage and plan interventions according to their priorities)</li>
+      </ul>
+      <h4>Hard skills</h4>
       <h5>Front end:</h5>
       <ul>
         <li>HTML5, CSS3 and javascript</li>

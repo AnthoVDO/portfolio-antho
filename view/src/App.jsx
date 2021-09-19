@@ -12,21 +12,18 @@ function App() {
   return (
     <div className="App" >
     <div className="container" >
-    <div className="top">
+      <div className="top">
       <Header/>
-
       <div className="top__profilePicture">
         <img src="./img/anthoVDO.jpg" alt="antho's profile"  className="top__profilePicture__picture"/>
       </div>
-
-      
-      
       <Contact />
-    </div>
+      </div>
       
       <Stack />
-      <Projects />
       <About />
+      <Projects />
+      
       
     </div>
     </div>

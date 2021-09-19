@@ -55,7 +55,15 @@ const Stack = () => {
             src:`${path}mongodb-icon${extension}`,
             alt: "mongodb logo",
             href:"https://www.mongodb.com/"
-        },
+        },git:{
+            src:`${path}git${extension}`,
+            alt:"git logo",
+            href:"https://git-scm.com/"
+        }, github:{
+            src:`${path}github${extension}`,
+            alt:"github logo",
+            href:"https://github.com/"
+        }
     }
 
 
