@@ -6,7 +6,9 @@ const About = () => {
     <div className="about">
       <TitleToShow specialClass="about__title" text="About" />
       <div className="about__description">
-
+      <p>
+        Currently learning <strong>C#/.NET</strong> on Udemy with Jonathan Roux and his course <i>Développeur C# | Formation complète 2021</i> 
+      </p>
       
       <p >
         I learned to code as a self taught with the help of Free Code Camp,

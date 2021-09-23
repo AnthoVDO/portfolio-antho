@@ -105,11 +105,13 @@
 }
 
 .nextButton {
-    right: -15px;
-    cursor: url("./css-png/right-arrow.png"), auto;
+    right: 16px;
+    // cursor: url("./css-png/right-arrow.png"), auto;
+    cursor: pointer;
 }
 
 .prevButton {
-    cursor: url("./css-png/left-arrow.png"), auto;
-    left: -15px;
+    // cursor: url("./css-png/left-arrow.png"), auto;
+    left: 16px;
+    cursor: pointer;
 }

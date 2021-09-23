@@ -1,7 +1,6 @@
 .top {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-columns: 50% 50%;
     margin-top: 100px;
 }
 
@@ -18,8 +17,28 @@
     }
 }
 
+@media(max-width:650px) {
+    .top__profilePicture__picture {
+        width: 75% !important;
+    }
+}
+
 @media(max-width:500px) {
     .top {
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 50% 20%;
+        .header {
+            grid-row: 1 / 2;
+        }
+        .top__profilePicture {
+            grid-row: 2/3;
+            grid-column: 1/2;
+            .top__profilePicture__picture {
+                width: 50% !important;
+            }
+        }
+        .contact {
+            grid-row: 3/4;
+        }
     }
 }
