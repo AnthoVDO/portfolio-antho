@@ -3,11 +3,12 @@ import TitleToShow from "./TitleToShow";
 
 const About = () => {
   return (
+    <div className="container" >
     <div className="about">
       <TitleToShow specialClass="about__title" text="About" />
       <div className="about__description">
       <p>
-        Currently learning <strong>C#/.NET</strong> on Udemy with Jonathan Roux and his course <i>Développeur C# | Formation complète 2021</i> 
+        Building a Saas, with C#.Net core and Bootstrap, for architects to manage their projects.
       </p>
       
       <p >
@@ -54,6 +55,7 @@ const About = () => {
         <li>Configure the projects as MVC</li>
       </ul>
       </div>
+    </div>
     </div>
   );
 };

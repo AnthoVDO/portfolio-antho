@@ -1,117 +1,60 @@
-.project__stack__card__name {
-    text-align: center;
-}
-
-.itemContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 20px 0;
-    &:hover {
-        transform: translate3d(0, -10%, 0);
-        transition: transform 0.5s;
-    }
-}
-
-.itemContainer__item {
-    position: relative;
-    border-radius: 15px;
+.project__stack__card__item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .item__preview {
-        width: 256px;
-        height: 192px;
-    }
+    background-color: #4A5B66;
+    padding: 1em 1em 60px 1em;
+    margin: 1em;
+    border-radius: 15px;
+    position: relative;
+    height: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: space-between;
+}
+
+.project__stack__card__header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project__stack__card__name {
+    text-align: center;
+    width: 100%;
 }
 
 .project__stack__card__technologie {
-    text-align: center;
-}
-
-// Mouse hover function
-.project__stack__card__a {
-    display: none;
-    position: absolute;
+    text-align: right;
     width: 100%;
-    height: 100%;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background-color: rgb(61, 61, 61);
-    opacity: 0.85;
-    // display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    p {
-        text-align: center;
-        color: white;
-        background-color: $secondary;
-        padding: 15px;
-        border-radius: 10px;
-        letter-spacing: 0.15em;
-    }
-    a {
-        padding: 10px;
-        border-radius: 15px;
-        margin: 10px;
-        opacity: 1;
-    }
-    .project__stack__card__a__link {
-        background-color: $primary;
-        color: white;
-    }
-    .project__stack__card__a__github {
-        background-color: white;
-        color: $primary;
-    }
-}
-
-.active {
-    display: flex;
-}
-
-// Slideshow
-.slideshow {
-    position: relative;
-    // overflow: hidden;
-}
-
-.slideshow__container {
-    transition: transform 0.3s;
-    transform: translate3d(0, 0, 0);
-}
-
-.itemContainer {
-    float: left;
-}
-
-.slideshow__container::after {
-    //avoid to loose div high due to float
-    content: '';
-    clear: both;
-    display: table;
-}
-
-.prevButton,
-.nextButton {
     position: absolute;
-    top: 40%;
-    height: 20%;
+    right: 0;
+    top: -36px;
+    right: -16px;
+    margin: 0;
 }
 
-.nextButton {
-    right: 16px;
-    // cursor: url("./css-png/right-arrow.png"), auto;
-    cursor: pointer;
+.item__preview {
+    width: 100%;
 }
 
-.prevButton {
-    // cursor: url("./css-png/left-arrow.png"), auto;
-    left: 16px;
-    cursor: pointer;
+.project__stack__card__description {
+    text-align: justify;
+}
+
+.project__stack__card__a {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 1em;
+}
+
+.project__stack__card__a__link,
+.project__stack__card__a__github {
+    padding: 1em 1.5em;
+    border-radius: 15px;
+    background-color: #265A63;
+    color: white;
 }

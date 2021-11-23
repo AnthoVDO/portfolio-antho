@@ -35,11 +35,13 @@ const Stack = () => {
             src:`${path}react${extension}`,
             alt: "React.js logo",
             href:"https://fr.reactjs.org/"
-        },redux:{
-            src:`${path}redux${extension}`,
-            alt: "redux.js logo",
-            href:"https://redux.js.org/"
-        },node:{
+        },
+        // redux:{
+        //     src:`${path}redux${extension}`,
+        //     alt: "redux.js logo",
+        //     href:"https://redux.js.org/"
+        // },
+        node:{
             src:`${path}nodejs${extension}`,
             alt: "node.js logo",
             href:"https://nodejs.org/en/"
@@ -47,11 +49,13 @@ const Stack = () => {
             src:`${path}express${extension}`,
             alt: "express.js logo",
             href:"https://expressjs.com/en/"
-        },pug:{
-            src:`${path}pug${extension}`,
-            alt: "pug logo",
-            href:"https://pugjs.org/api/getting-started.html"
-        },mongodb:{
+        },
+        // pug:{
+        //     src:`${path}pug${extension}`,
+        //     alt: "pug logo",
+        //     href:"https://pugjs.org/api/getting-started.html"
+        // },
+        mongodb:{
             src:`${path}mongodb-icon${extension}`,
             alt: "mongodb logo",
             href:"https://www.mongodb.com/"
@@ -63,6 +67,14 @@ const Stack = () => {
             src:`${path}github${extension}`,
             alt:"github logo",
             href:"https://github.com/"
+        }, csharp:{
+            src:`${path}csharp${extension}`,
+            alt:"c sharp logo",
+            href:"https://docs.microsoft.com/en-us/dotnet/csharp/"
+        }, dotnet:{
+            src:`${path}dotnet${extension}`,
+            alt:"dotnet logo",
+            href:"https://dotnet.microsoft.com/"
         }
     }
 

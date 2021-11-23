@@ -7,8 +7,9 @@ const StackCard = (props) => {
 
         const vercel = /\.vercel\.app\//;
         const heroku = /\.herokuapp\.com\//;
+        const azure = /\.azurewebsites\.net\//;
         const https = /https:\/\//;
-        const path = e.replace(vercel, "").replace(heroku, "").replace(https, "");
+        const path = e.replace(vercel, "").replace(heroku, "").replace(https, "").replace(azure, "");
         return "./screenshot-small/"+path+".png"
     }
 
@@ -79,50 +80,63 @@ const StackCard = (props) => {
             src:`${path}mongodb-icon${extension}`,
             alt: "mongodb logo",
             href:"https://www.mongodb.com/"
-        },
+        },csharp:{
+            src:`${path}csharp${extension}`,
+            alt:"c sharp logo",
+            href:"https://docs.microsoft.com/en-us/dotnet/csharp/"
+        }, dotnet:{
+            src:`${path}dotnet${extension}`,
+            alt:"dotnet logo",
+            href:"https://dotnet.microsoft.com/"
+        }
     }
 
-    //    console.log(props.element.technologie)
+    
        
     
 
 
     return (
         <div className={myClass} onMouseEnter={showTheCardInfo} onMouseLeave={hiddeTheCardInfo}>
-        <div className={nestedClass}>
+        <div className={nestedClass+" project__stack__card__item"}>
         
+        <div className="project__stack__card__header">
+            <h4 className="project__stack__card__name">{props.element.name}</h4> 
 
-        <h4 className="project__stack__card__name">{props.element.name}</h4>
+            <span className="project__stack__card__technologie">{
+                
+                Object.entries(props.element.technologie).map(element=>{
+                    
+                return (
+                    <Icon 
+                    href={stackList[element[1]].href} 
+                    alt={stackList[element[1]].alt} 
+                    src={stackList[element[1]].src}
+                    width="20px"
+                    height="20px"
+                    key={stackList[element[1]].alt+"reactKeyStack"+props.element.name}
+
+
+                    />
+                )
+                
+                })
+                }
+            </span>
+        </div>
         <img 
         src={cleanUrlToGetTheScreenShot(props.element.link)} 
         alt="" 
         className="item__preview"  
         />
-        <h5 className="project__stack__card__technologie">{
-            
-            Object.entries(props.element.technologie).map(element=>{
-                
-              return (
-                  <Icon 
-                  href={stackList[element[1]].href} 
-                  alt={stackList[element[1]].alt} 
-                  src={stackList[element[1]].src}
-                  width="20px"
-                  height="20px"
-                  key={stackList[element[1]].alt+"reactKeyStack"+props.element.name}
-
-
-                  />
-              )
-              
-            })
-            }</h5>
-
+       
+        <p className="project__stack__card__description">{props.element.description}</p>
         <div className="project__stack__card__a">
-            <p className="project__stack__card__description">{props.element.description}</p>
+            
             <a href={props.element.link} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__link">Link</a>
             <a href={props.element.github} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__github">Github</a>
         </div>
+        
 
         </div>
         </div>

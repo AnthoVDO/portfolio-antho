@@ -1,0 +1,30 @@
+.home-mainProject {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-mainProject__item {
+    width: 50%;
+}
+
+.home-h2 {
+    margin: 2em;
+}
+
+.home-project {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    margin: 1em 0;
+    padding: 1em 1.5em;
+    border-radius: 15px;
+    background-color: #265A63;
+    color: white;
+    text-decoration: none;
+}

@@ -5,23 +5,8 @@ import "aos/dist/aos.css"
 const TitleToShow = (props) => {
 
 
-    // useEffect(()=>{
-
-    //     window.addEventListener('load', function() { 
-    //         AOS.init({
-    //         duration: 2000,
-    //         offset:150,
-    //         }
-            
-    //     ) 
-    // });
-
-    // }, []);
-
-
     return (
         <h3 
-        // data-aos="fade-up"
         className={props.specialClass}>
         {props.text}
         </h3>

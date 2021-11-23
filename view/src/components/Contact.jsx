@@ -9,6 +9,7 @@ const Contact = () => {
 
 
     return (
+        
         <div className="contact">
         <div className="contact__container">
         <IconContext.Provider value={{ size:"2em", color:"#3c6e71"}} >
@@ -24,6 +25,7 @@ const Contact = () => {
         
             
         </div>
+        
     );
 };
 
