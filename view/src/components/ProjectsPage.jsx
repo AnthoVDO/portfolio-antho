@@ -314,12 +314,12 @@ const ProjectsPage = () => {
                 projects.map(p=>{
                     if(p.stack==="Full"){
                        return( 
-                    <div className="ProjectPage-projects-items">
+                    
                     <StackCard 
                     element={p}
-                    addClass="item-hight"
+                    addClass="ProjectPage-projects-items"
                     />
-                    </div>
+                    
                     )
                     }else{
                        return null
@@ -336,12 +336,12 @@ const ProjectsPage = () => {
                 projects.map(p=>{
                     if(p.stack==="FrontEnd"){
                        return( 
-                        <div className="ProjectPage-projects-items">
+                        
                            <StackCard 
                     element={p}
-                    addClass="item-hight"
+                    addClass="ProjectPage-projects-items"
                     />
-                    </div>
+                    
                     
                     )
                     }else{
@@ -359,12 +359,12 @@ const ProjectsPage = () => {
                     if(p.stack==="BackEnd"){
                        return( 
                            
-                        <div className="ProjectPage-projects-items">
+                        
                            <StackCard 
                     element={p}
-                    addClass="item-hight"
+                    addClass="ProjectPage-projects-items"
                     />
-                    </div>
+                    
                     )
                     }else{
                        return null

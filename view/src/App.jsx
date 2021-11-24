@@ -9,39 +9,12 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import React,{ useEffect, useState } from 'react';
-const axios = require('axios');
+import React from 'react';
 
 
 function App() {
 
-   // const url = "http://localhost:8080/api/v1/portfolio";
-   const url = "https://anthovdo-s-portfolio.herokuapp.com/api/v1/portfolio"
-    const [projects, setProjects] = useState([]);
-
-    
-    
-
-    useEffect(()=>{
-        
-        
-        // Call the API to get the projects
-
-    const getProject = async () => {
-        
-        try{
-            const response = await axios.get(url);
-            await setProjects(response.data);
-
-            
-        }catch(e){
-            console.log("Fail to fetch data from back end project: "+e);
-        }
-    }
-        getProject();    
-        
-    },[])
-
+   
   return (
     <div className="App" >
     
@@ -65,7 +38,7 @@ function App() {
       </nav>
     
     <Routes>
-      <Route path="/projects" element={<ProjectsPage projects={projects}/>}/>
+      <Route path="/projects" element={<ProjectsPage />}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/contact" element={<ContactPage/>}/>
 

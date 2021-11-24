@@ -101,7 +101,13 @@ const StackCard = (props) => {
         <div className={nestedClass+" project__stack__card__item"}>
         
         <div className="project__stack__card__header">
-            <h4 className="project__stack__card__name">{props.element.name}</h4> 
+            <div className="project__stack__card__name">
+            <span className="project__stack__card__name-red">*</span>
+            <span className="project__stack__card__name-orange">*</span>
+            <span className="project__stack__card__name-green">*</span>
+            <h4 className="project__stack__card__name-title">{props.element.name}</h4> 
+            </div>
+            
 
             <span className="project__stack__card__technologie">{
                 

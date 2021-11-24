@@ -34,7 +34,12 @@ const Home = ()=>{
       
       
 
-      <h2 className="home-h2">I'm building fullstack websites with React,NodeJS and C#/.Net</h2>
+      <h2 className="home-h2">I'm building fullstack websites with
+      <img src="/icons/react.svg" alt="React JS logo" width="25px" height="25px" className="home-h2-stack"/> 
+      <img src="/icons/nodejs.svg" alt="Node JS logo" width="25px" height="25px" className="home-h2-stack"/> 
+      <img src="/icons/csharp.svg" alt="React JS logo" width="25px" height="25px" className="home-h2-stack"/> 
+      <img src="/icons/dotnet.svg" alt="React JS logo" width="25px" height="25px" className="home-h2-stack"/>
+        </h2>
       <div className="home-mainProject">
         <StackCard 
           element={archiProjectManager}
