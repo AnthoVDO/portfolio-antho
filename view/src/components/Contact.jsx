@@ -1,6 +1,5 @@
 import React from 'react';
-import { FaGithub } from "react-icons/fa";
-import { SiMinutemailer } from "react-icons/si";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { ImTwitter } from "react-icons/im";
 import { IconContext } from "react-icons";
 
@@ -17,7 +16,7 @@ const Contact = () => {
             <ul className="contact__container__list">
             <li className="contact__container__list__item"><a href="https://github.com/AnthoVDO" target="_blank" rel="noreferrer noopener"> <FaGithub/> </a></li>
             <li className="contact__container__list__item"><a href="https://twitter.com/didacteantho" target="_blank" rel="noreferrer noopener"> <ImTwitter/> </a></li>
-            <li className="contact__container__list__item"><a href="mailto:anthony.vdo@hotmail.be" target="_blank" rel="noreferrer noopener"> <SiMinutemailer/> </a></li>
+            <li className="contact__container__list__item"><a href="https://www.linkedin.com/in/anthony-van-den-ostende-b5268310b/" target="_blank" rel="noreferrer noopener"><FaLinkedin/></a></li>
             </ul>
 
         </IconContext.Provider>

@@ -26,9 +26,6 @@ const Home = ()=>{
       <div className="container" >
       <div className="top">
       <Header/>
-      <div className="top__profilePicture">
-        <img src="./img/anthoVDO.jpg" alt="antho's profile"  className="top__profilePicture__picture"/>
-      </div>
       <Contact />
       </div>
       

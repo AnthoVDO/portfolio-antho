@@ -11,6 +11,7 @@ h3 {
 }
 
 .container {
-    background-color: $mainBG;
+    background: rgb(33, 59, 77);
+    background: linear-gradient(30deg, rgba(33, 59, 77, 1) 0%, rgba(38, 90, 99, 1) 52%, rgba(33, 59, 77, 1) 100%);
     color: $textColor;
 }

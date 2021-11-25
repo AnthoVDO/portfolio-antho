@@ -16,6 +16,7 @@ function App() {
 
    
   return (
+    <Router>
     <div className="App" >
     
       <nav className="navBar">
@@ -46,6 +47,7 @@ function App() {
     </Routes>
     
     </div>
+    </Router>
   );
 }
 
