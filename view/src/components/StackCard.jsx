@@ -1,5 +1,6 @@
-import React from 'react';
 import Icon from './Icon.jsx';
+import ProjectModal from './ProjectModal.jsx';
+import React, {useState, useEffect} from 'react';
 
 const StackCard = (props) => {
 
@@ -16,17 +17,7 @@ const StackCard = (props) => {
     const myClass = props.addClass
     const nestedClass = props.addClass+"__item"
 
-    /* Mouse hover the card */
-
-    const showTheCardInfo = (e) => {
-        const element = e.currentTarget.firstChild.querySelector(".project__stack__card__a");
-        element.className = "project__stack__card__a active"
-    }
-
-    const hiddeTheCardInfo = (e) => {
-        const element = e.currentTarget.firstChild.querySelector(".project__stack__card__a");
-        element.className = "project__stack__card__a"
-    } 
+    
     
     const path = "./icons/"
     const extension = ".svg"
@@ -91,60 +82,84 @@ const StackCard = (props) => {
         }
     }
 
+    const [modalShow, setModalShow] = useState(false);
+
+    useEffect(() => {
+        if(modalShow){
+            document.body.style.overflow = 'hidden'
+        }else{
+            document.body.style.overflow = 'scroll';
+        }
+    }, [modalShow])
+    
     
        
     
 
 
     return (
-        <div className={myClass} onMouseEnter={showTheCardInfo} onMouseLeave={hiddeTheCardInfo}>
+        <div className={myClass} >
         <div className={nestedClass+" project__stack__card__item"}>
         
-        <div className="project__stack__card__header">
-            <div className="project__stack__card__name">
-            <span className="project__stack__card__name-red">*</span>
-            <span className="project__stack__card__name-orange">*</span>
-            <span className="project__stack__card__name-green">*</span>
-            <h4 className="project__stack__card__name-title">{props.element.name}</h4> 
-            </div>
-            
-
-            <span className="project__stack__card__technologie">{
+            <div className="project__stack__card__header">
+                <div className="project__stack__card__name">
+                    <span className="project__stack__card__name-red">*</span>
+                    <span className="project__stack__card__name-orange">*</span>
+                    <span className="project__stack__card__name-green">*</span>
+                    <h4 className="project__stack__card__name-title">{props.element.name}</h4> 
+                </div>
                 
-                Object.entries(props.element.technologie).map(element=>{
+
+                <span className="project__stack__card__technologie">{
                     
-                return (
-                    <Icon 
-                    href={stackList[element[1]].href} 
-                    alt={stackList[element[1]].alt} 
-                    src={stackList[element[1]].src}
-                    width="20px"
-                    height="20px"
-                    key={stackList[element[1]].alt+"reactKeyStack"+props.element.name}
+                    Object.entries(props.element.technologie).map(element=>{
+                        
+                    return (
+                        <Icon 
+                        href={stackList[element[1]].href} 
+                        alt={stackList[element[1]].alt} 
+                        src={stackList[element[1]].src}
+                        width="20px"
+                        height="20px"
+                        key={stackList[element[1]].alt+"reactKeyStack"+props.element.name}
 
 
-                    />
-                )
-                
-                })
-                }
-            </span>
-        </div>
-        <img 
-        src={cleanUrlToGetTheScreenShot(props.element.link)} 
-        alt="" 
-        className="item__preview"  
-        />
+                        />
+                    )
+                    
+                    })
+                    }
+                </span>
+            </div>
+            <img 
+            src={cleanUrlToGetTheScreenShot(props.element.link)} 
+            alt="" 
+            className="item__preview"  
+            />
        
-        <p className="project__stack__card__description">{props.element.description}</p>
-        <div className="project__stack__card__a">
-            
-            <a href={props.element.link} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__link">Link</a>
-            <a href={props.element.github} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__github">Github</a>
-        </div>
+            <p className="project__stack__card__description">{props.element.description}</p>
+            <div className="project__stack__card__a">
+                <a href={props.element.link} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__link">Link</a>
+                <button onClick={()=>{setModalShow(true)}}>More info</button>
+                <a href={props.element.github} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__github">Github</a>
+            </div>
         
 
         </div>
+        < ProjectModal modalShow={modalShow}
+        onClose={()=>{setModalShow(false)}}
+        title={props.element.name}
+        description={props.element.description}
+        use={props.element.use}
+        useLink={props.element.useLink}
+        link={props.element.link}
+        github={props.element.github}
+        technologie={props.element.technologie}
+        stack={props.element.stack}
+        img={cleanUrlToGetTheScreenShot(props.element.link)}
+
+            
+         />
         </div>
     );
 };

@@ -7,7 +7,7 @@ import {
   Link
 } from "react-router-dom";
 
-const Home = ()=>{
+const Home = (props)=>{
 
     const archiProjectManager = {
       "name": "ArchiProjectManager",

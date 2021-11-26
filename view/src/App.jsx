@@ -14,6 +14,8 @@ import React from 'react';
 
 function App() {
 
+  
+
    
   return (
     <Router>
@@ -39,7 +41,7 @@ function App() {
       </nav>
     
     <Routes>
-      <Route path="/projects" element={<ProjectsPage />}/>
+      <Route path="/projects" element={<ProjectsPage/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/contact" element={<ContactPage/>}/>
 

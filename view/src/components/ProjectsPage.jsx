@@ -1,7 +1,7 @@
 import React from 'react';
 import StackCard from "./StackCard";
 
-const ProjectsPage = () => {
+const ProjectsPage = (props) => {
 
 
     const projects = [{
@@ -25,7 +25,7 @@ const ProjectsPage = () => {
         "name": "URLShortener",
         "description": "UrlShortener made for FreeCodeCamp Back end certification (check branch work3)",
         "use":"Enter the website url you want to short, it return a json with the shortUrl, add the shortUrl value to the URL and it redirect to the desired website",
-        "useLink":["urlshortener001.png","urlshortener002.png","urlshortener003.jpg"],
+        "useLink":["./use/urlshortener001.png","urlshortener002.png","./use/urlshortener003.jpg"],
         "link": "https://fcc-api-ms-urlshortener.herokuapp.com/",
         "github": "https://github.com/AnthoVDO/boilerplate-project-urlshortener/tree/work3",
         "technologie": [
@@ -155,7 +155,7 @@ const ProjectsPage = () => {
         "name": "Loop studio",
         "description": "Loop studio made for Front end mentor challenge",
         "use":"Landing page made to train",
-        "useLink":["tasktraquer001.png"],
+        "useLink":["./use/tasktraquer001.png"],
         "link": "https://front-end-mentor-loop-studio.vercel.app/",
         "github": "https://github.com/AnthoVDO/Front_End_Mentor--Challenge/tree/master/loopstudios-landing-page-main",
         "stack": "FrontEnd",
@@ -178,14 +178,14 @@ const ProjectsPage = () => {
     //     ],
     //     "stack": "FrontEnd"
     // }
-    , {
+     {
         "_id": {
             "$oid": "60f2b3373ee84d15d4fa0580"
         },
         "name": "Restaurant review",
         "description": "MERN App that list the differents restaurant and give possibility to add review",
         "use":"Website to post review. You can see the review per restaurant, add a review, modify it and delete it. You can also click to see the restaurant on the map and filter by name or zip code",
-        "useLink":["restaurant-review001.png","restaurant-review002.png","restaurant-review003.png","restaurant-review004.png","restaurant-review005.png","restaurant-review006.png","restaurant-review007.png","restaurant-review008.png","restaurant-review009.png","restaurant-review010.png","restaurant-review011.png","restaurant-review012.png","restaurant-review013.png","restaurant-review014.png","restaurant-review015.png","restaurant-review016.png","restaurant-review017.png","restaurant-review018.png","restaurant-review019.png","restaurant-review020.png"],
+        "useLink":["./use/restaurant-review001.png","./use/restaurant-review002.png","./use/restaurant-review003.png","./use/restaurant-review004.png","./use/restaurant-review005.png","./use/restaurant-review006.png","./use/restaurant-review007.png","./use/restaurant-review008.png","./use/restaurant-review009.png","./use/restaurant-review010.png","./use/restaurant-review011.png","./use/restaurant-review012.png","./use/restaurant-review013.png","./use/restaurant-review014.png","./use/restaurant-review015.png","./use/restaurant-review016.png","./use/restaurant-review017.png","./use/restaurant-review018.png","./use/restaurant-review019.png","./use/restaurant-review020.png"],
         "link": "https://restaurant-review-seven.vercel.app/",
         "github": "https://github.com/AnthoVDO/restaurant-review",
         "technologie": [
@@ -201,8 +201,8 @@ const ProjectsPage = () => {
         },
         "name": "ExercicesTracker",
         "description": "Exercices tracker made for FreeCodeCamp Back end certification (check branch work4)",
-        "use":"1) Create a user by adding a username </br> 2) Take the id and add your exercice with a description, a time and a date </br> 3) Check the log by adding your Id to the following Url: ",
-        "useLink":["exercices-tracker001.png","exercices-tracker002.png","exercices-tracker003.png","exercices-tracker004.png","exercices-tracker005.png","exercices-tracker006.png"],
+        "use":"1) Create a user by adding a username </br> 2) Take the id and add your exercice with a description, a time and a date </br> 3) Check the log by adding your Id to the Url",
+        "useLink":["./use/exercices-tracker001.png","./use/exercices-tracker002.png","./use/exercices-tracker003.png","./use/exercices-tracker004.png","./use/exercices-tracker005.png","./use/exercices-tracker006.png"],
         "link": "https://fcc-api-ms-exercices-tracker.herokuapp.com/",
         "github": "https://github.com/AnthoVDO/boilerplate-project-exercisetracker/tree/work4",
         "technologie": [
@@ -276,7 +276,7 @@ const ProjectsPage = () => {
         "name": "HeaderParser",
         "description": "HarderParser made for FreeCodeCamp Back end certification (check branch work2)",
         "use":"Click on the exemple URL and you will be redirected to a JSON which contain your IP adresse, language and software",
-        "useLink":["headerparser001.png","headerparser002.png"],
+        "useLink":["./use/headerparser001.png","./use/headerparser002.png"],
         "link": "https://fcc-api-ms-headerparser.herokuapp.com/",
         "github": "https://github.com/AnthoVDO/boilerplate-project-headerparser/tree/work2",
         "technologie": [
@@ -306,7 +306,7 @@ const ProjectsPage = () => {
         "name": "Static job list",
         "description": "Static job list made for Front end mentor challenge",
         "use":"Job board made with React, allow to click on differents tags to filter the jobs",
-        "useLink":["static-job-list001.png","static-job-list002.png","static-job-list003.png","static-job-list004.png"],
+        "useLink":["./use/static-job-list001.png","./use/static-job-list002.png","./use/static-job-list003.png","./use/static-job-list004.png"],
         "link": "https://static-job-list-in-react.vercel.app/",
         "github": "https://github.com/AnthoVDO/Front_End_Mentor--Challenge/tree/master/static-job-listings-react",
         "technologie": [
@@ -320,7 +320,7 @@ const ProjectsPage = () => {
         "name": "TimeStamp",
         "description": "TimeStamp made for FreeCodeCamp Back end certification (check branch work1)",
         "use":"Add the date to the URL and you will be redirected to a JSON with the UTC and Unix date",
-        "useLink":["timestamp001.png","timestamp002.png"],
+        "useLink":["./use/timestamp001.png","./use/timestamp002.png"],
         "link": "https://fcc-api-microservice-timestamp.herokuapp.com/",
         "github": "https://github.com/AnthoVDO/boilerplate-project-timestamp/tree/work1",
         "technologie": [
@@ -332,8 +332,8 @@ const ProjectsPage = () => {
     }, {
         "name": "ArchiProjectManager",
         "description": "ArchiProjectManager is a Saas that has been build to help Architects to manage theirs projects",
-        "use":"ArchiProjectManager is made for the architects to help them manage their clients and projects. It has been build with C#/.Net Razor pages and Bootstrap. I'm working on it and there are thoses features: You can login, logout, create an account. While inside, you can create your clients, manage them with a CRUD. After that, you can create a project according to a client and then manage the project as you want. Both client and project dashboard have tool to find them like differents sorting, filter by word or filter by project phase.",
-        "useLink":["archiprojectmanager.png","archiprojectmanager002.png","archiprojectmanager003.png","archiprojectmanager04.png","archiprojectmanager05.png","archiprojectmanager06.png"],
+        "use":"It has been build with C#/.Net Razor pages and Bootstrap. I'm working on it and there are thoses features: You can login, logout, create an account. While inside, you can create your clients, manage them with a CRUD. After that, you can create a project according to a client and then manage the project as you want. Both client and project dashboard have tool to find them like differents sorting, filter by word or filter by project phase.",
+        "useLink":["./use/archiprojectmanager.png","./use/archiprojectmanager002.png","./use/archiprojectmanager003.png","./use/archiprojectmanager04.png","./use/archiprojectmanager05.png","./use/archiprojectmanager06.png","./use/archiprojectmanager07.png"],
         "link": "https://archiprojectmanager.azurewebsites.net/",
         "github": "https://github.com/AnthoVDO/ArchiProjectManager",
         "technologie": [
