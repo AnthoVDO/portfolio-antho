@@ -1,5 +1,7 @@
 import React from 'react';
 import Icon from './Icon';
+import { ImCross } from 'react-icons/im';
+import { FaGithub, FaLink } from 'react-icons/fa';
 
 const ProjectModal = (props) => {
 
@@ -96,7 +98,7 @@ const ProjectModal = (props) => {
                         </div>
                     
 
-                        <span className="project__stack__card__technologie">{
+                        <span className="modal__technologie">{
                             
                             Object.entries(props.technologie).map(element=>{
                                 
@@ -124,7 +126,7 @@ const ProjectModal = (props) => {
                     />
         
                     <p className="project__stack__card__description">{props.description}</p>
-                    <p className="project__stack__card__description">{props.use}</p>
+                    <p className="project__stack__card__description modal__useDescription">{props.use}</p>
                     <div className="project__stack__card__useContainer">
                         {
                             Object.entries(props.useLink).map(e=>{
@@ -132,19 +134,26 @@ const ProjectModal = (props) => {
                                 <img 
                                 src={e[1]} 
                                 alt="" 
-                                className="item__preview useImg"  
+                                className="item__preview useImg"
+                                key={"modalImgKey:item__preview useImg"+e[1]}  
                                 /> 
                                 )
                                 
                             })
                         }
                     </div>
-                    <div className="project__stack__card__a">
-                        <a href={props.link} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__link">Link</a>
-                        
-                        <a href={props.github} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__github">Github</a>
+                    <div className="modal__link">
+                    <a href={props.link} target="_blank" rel="noreferrer noopener"  className="stackCard__Btn">
+
+                    <FaLink/>
+                    </a>
+                    <a href={props.github} target="_blank" rel="noreferrer noopener"  className="stackCard__Btn">
+
+                    <FaGithub/>
+                    </a>
+                    <button className="modal-closeBtn" onClick={props.onClose}><ImCross/></button>
                     </div>
-                    <button className="modal-closeBtn" onClick={props.onClose}>Close</button>
+                    
 
                 </div>
 

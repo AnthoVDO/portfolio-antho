@@ -1,6 +1,9 @@
 import Icon from './Icon.jsx';
 import ProjectModal from './ProjectModal.jsx';
 import React, {useState, useEffect} from 'react';
+import { FaGithub, FaLink } from 'react-icons/fa';
+import {BsFillInfoCircleFill} from 'react-icons/bs';
+import { IconContext } from "react-icons";
 
 const StackCard = (props) => {
 
@@ -121,7 +124,7 @@ const StackCard = (props) => {
                         src={stackList[element[1]].src}
                         width="20px"
                         height="20px"
-                        key={stackList[element[1]].alt+"reactKeyStack"+props.element.name}
+                        key={stackList[element[1]].alt+"reactKeyStack"+props.element.name+myClass}
 
 
                         />
@@ -135,15 +138,26 @@ const StackCard = (props) => {
             src={cleanUrlToGetTheScreenShot(props.element.link)} 
             alt="" 
             className="item__preview"  
+            
             />
        
             <p className="project__stack__card__description">{props.element.description}</p>
+            <IconContext.Provider value={{ size:"20px", color:"#EF8612"}} >
             <div className="project__stack__card__a">
-                <a href={props.element.link} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__link">Link</a>
-                <button onClick={()=>{setModalShow(true)}}>More info</button>
-                <a href={props.element.github} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__github">Github</a>
+                <a href={props.element.link} target="_blank" rel="noreferrer noopener"  className="stackCard__Btn">
+
+                <FaLink/>
+                </a>
+                <a href={props.element.github} target="_blank" rel="noreferrer noopener"  className="stackCard__Btn">
+
+                <FaGithub/>
+                </a>
+                <button className="stackCard__Btn" onClick={()=>{setModalShow(true)}}>
+
+                <BsFillInfoCircleFill/>
+                </button>
             </div>
-        
+            </IconContext.Provider >
 
         </div>
         < ProjectModal modalShow={modalShow}
@@ -157,7 +171,7 @@ const StackCard = (props) => {
         technologie={props.element.technologie}
         stack={props.element.stack}
         img={cleanUrlToGetTheScreenShot(props.element.link)}
-
+        key={"modalKey:"+props.element.name}
             
          />
         </div>

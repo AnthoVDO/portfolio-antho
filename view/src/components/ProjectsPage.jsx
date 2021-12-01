@@ -1,10 +1,85 @@
-import React from 'react';
+import React, { useState } from 'react';
 import StackCard from "./StackCard";
+import { BsArrowDown, BsArrowUp } from "react-icons/bs";
 
 const ProjectsPage = (props) => {
 
 
     const projects = [{
+        "_id": {
+            "$oid": "60f2b3373ee84d15d4fa057c"
+        },
+        "name": "Static job list",
+        "description": "Static job list made for Front end mentor challenge",
+        "use":"Job board made with React, allow to click on differents tags to filter the jobs",
+        "useLink":["./use/static-job-list001.png","./use/static-job-list002.png","./use/static-job-list003.png","./use/static-job-list004.png"],
+        "link": "https://static-job-list-in-react.vercel.app/",
+        "github": "https://github.com/AnthoVDO/Front_End_Mentor--Challenge/tree/master/static-job-listings-react",
+        "technologie": [
+            "react"
+        ],
+        "stack": "FrontEnd"
+    },{
+        "_id": {
+            "$oid": "60f2b3373ee84d15d4fa057b"
+        },
+        "name": "Loop studio",
+        "description": "Loop studio made for Front end mentor challenge",
+        "use":"Landing page made to train",
+        "useLink":["./use/tasktraquer001.png"],
+        "link": "https://front-end-mentor-loop-studio.vercel.app/",
+        "github": "https://github.com/AnthoVDO/Front_End_Mentor--Challenge/tree/master/loopstudios-landing-page-main",
+        "stack": "FrontEnd",
+        "technologie": [
+            "html",
+            "css3",
+            "javascript"
+        ]
+    },{
+        "_id": {
+            "$oid": "60f2b3373ee84d15d4fa0579"
+        },
+        "name": "To do app",
+        "description": "To do app made for Front end mentor challenge",
+        "use":"Todo app made with react. Allow to add task, drag and drop, checked task done, filter them and clear completed, night and day mode",
+        "useLink":[],
+        "link": "https://to-do-app-react-front-end-mentor-challenge.vercel.app/",
+        "github": "https://github.com/AnthoVDO/ToDo-app-React__FrontEndMentor-challenge",
+        "technologie": [
+            "react"
+        ],
+        "stack": "FrontEnd"
+    },{
+        "_id": {
+            "$oid": "60f2b3373ee84d15d4fa0570"
+        },
+        "name": "Markdown previewer",
+        "description": "Markdown previewer made for FreeCodeCamp certification",
+        "use":"Markdown changing while typing made with React",
+        "useLink":[],
+        "link": "https://markdown-previewer-react-freecodecamp.vercel.app/",
+        "github": "https://github.com/AnthoVDO/Markdown-previewer-react",
+        "technologie": [
+            "react"
+        ],
+        "stack": "FrontEnd"
+    }, {
+        "_id": {
+            "$oid": "60f2b3373ee84d15d4fa057a"
+        },
+        "name": "Interactive pricing component",
+        "description": "Interactive pricing component made for Front end mentor challenge",
+        "use":"Example of a pricing page with the possibility to choose the price and get reduction if we take yearly billing",
+        "useLink":[],
+        "link": "https://interactive-pricing-component-chi.vercel.app/",
+        "github": "https://github.com/AnthoVDO/Front_End_Mentor--Challenge/tree/master/interactive-pricing-component-main",
+        "stack": "FrontEnd",
+        "technologie": [
+            "html",
+            "css3",
+            "javascript"
+        ]
+    }, {
         "_id": {
             "$oid": "60f2b3373ee84d15d4fa0573"
         },
@@ -14,6 +89,48 @@ const ProjectsPage = (props) => {
         "useLink":[],
         "link": "https://pomodoro-react-freecodecamp-anthovdo.vercel.app/",
         "github": "https://github.com/AnthoVDO/pomodoro-react-freecodecamp",
+        "technologie": [
+            "react"
+        ],
+        "stack": "FrontEnd"
+    },{
+        "_id": {
+            "$oid": "60f2b3373ee84d15d4fa0572"
+        },
+        "name": "Calculator",
+        "description": "Calculator made for FreeCodeCamp certification",
+        "use":"Simple calculator made with React",
+        "useLink":[],
+        "link": "https://javascript-calculator-react-freecodecamp.vercel.app/",
+        "github": "https://github.com/AnthoVDO/javascript-calculator-react-freecodecamp",
+        "technologie": [
+            "react"
+        ],
+        "stack": "FrontEnd"
+    },{
+        "_id": {
+            "$oid": "60f2b3373ee84d15d4fa056f"
+        },
+        "name": "Random quote machine",
+        "description": "Random quote made for FreeCodeCamp certification",
+        "use":"Used to generate a random quote and give the possibility to share it on tweeter",
+        "useLink":[],
+        "link": "https://random-quote-machine-react-freecodecamp.vercel.app/",
+        "github": "https://github.com/AnthoVDO/Random-quote-machine__React",
+        "technologie": [
+            "react"
+        ],
+        "stack": "FrontEnd"
+    },{
+        "_id": {
+            "$oid": "60f2b3373ee84d15d4fa0571"
+        },
+        "name": "Drum machine",
+        "description": "Drum machine made for FreeCodeCamp certification",
+        "use":"Drum machine made with React, we can turn it on/off, play piano, drum and Duke nukem sound (Video game character)",
+        "useLink":[],
+        "link": "https://drum-machine-react-freecodecamp-anthovdo.vercel.app/",
+        "github": "https://github.com/AnthoVDO/drum-machine-react-freecodecamp",
         "technologie": [
             "react"
         ],
@@ -34,21 +151,7 @@ const ProjectsPage = (props) => {
             "mongodb"
         ],
         "stack": "BackEnd"
-    }, {
-        "_id": {
-            "$oid": "60f2b3373ee84d15d4fa0570"
-        },
-        "name": "Markdown previewer",
-        "description": "Markdown previewer made for FreeCodeCamp certification",
-        "use":"Markdown changing while typing made with React",
-        "useLink":[],
-        "link": "https://markdown-previewer-react-freecodecamp.vercel.app/",
-        "github": "https://github.com/AnthoVDO/Markdown-previewer-react",
-        "technologie": [
-            "react"
-        ],
-        "stack": "FrontEnd"
-    }, 
+    },  
     // {
     //     "_id": {
     //         "$oid": "60f2b3373ee84d15d4fa057e"
@@ -76,35 +179,7 @@ const ProjectsPage = (props) => {
             "d3"
         ],
         "stack": "FrontEnd"
-    }, {
-        "_id": {
-            "$oid": "60f2b3373ee84d15d4fa0579"
-        },
-        "name": "To do app",
-        "description": "To do app made for Front end mentor challenge",
-        "use":"Todo app made with react. Allow to add task, drag and drop, checked task done, filter them and clear completed, night and day mode",
-        "useLink":[],
-        "link": "https://to-do-app-react-front-end-mentor-challenge.vercel.app/",
-        "github": "https://github.com/AnthoVDO/ToDo-app-React__FrontEndMentor-challenge",
-        "technologie": [
-            "react"
-        ],
-        "stack": "FrontEnd"
-    }, {
-        "_id": {
-            "$oid": "60f2b3373ee84d15d4fa0572"
-        },
-        "name": "Calculator",
-        "description": "Calculator made for FreeCodeCamp certification",
-        "use":"Simple calculator made with React",
-        "useLink":[],
-        "link": "https://javascript-calculator-react-freecodecamp.vercel.app/",
-        "github": "https://github.com/AnthoVDO/javascript-calculator-react-freecodecamp",
-        "technologie": [
-            "react"
-        ],
-        "stack": "FrontEnd"
-    }, {
+    },  {
         "_id": {
             "$oid": "60f2b3373ee84d15d4fa0574"
         },
@@ -118,53 +193,7 @@ const ProjectsPage = (props) => {
             "d3"
         ],
         "stack": "FrontEnd"
-    }, {
-        "_id": {
-            "$oid": "60f2b3373ee84d15d4fa056f"
-        },
-        "name": "Random quote machine",
-        "description": "Random quote made for FreeCodeCamp certification",
-        "use":"Used to generate a random quote and give the possibility to share it on tweeter",
-        "useLink":[],
-        "link": "https://random-quote-machine-react-freecodecamp.vercel.app/",
-        "github": "https://github.com/AnthoVDO/Random-quote-machine__React",
-        "technologie": [
-            "react"
-        ],
-        "stack": "FrontEnd"
-    }, {
-        "_id": {
-            "$oid": "60f2b3373ee84d15d4fa057a"
-        },
-        "name": "Interactive pricing component",
-        "description": "Interactive pricing component made for Front end mentor challenge",
-        "use":"Example of a pricing page with the possibility to choose the price and get reduction if we take yearly billing",
-        "useLink":[],
-        "link": "https://interactive-pricing-component-chi.vercel.app/",
-        "github": "https://github.com/AnthoVDO/Front_End_Mentor--Challenge/tree/master/interactive-pricing-component-main",
-        "stack": "FrontEnd",
-        "technologie": [
-            "html",
-            "css3",
-            "javascript"
-        ]
-    }, {
-        "_id": {
-            "$oid": "60f2b3373ee84d15d4fa057b"
-        },
-        "name": "Loop studio",
-        "description": "Loop studio made for Front end mentor challenge",
-        "use":"Landing page made to train",
-        "useLink":["./use/tasktraquer001.png"],
-        "link": "https://front-end-mentor-loop-studio.vercel.app/",
-        "github": "https://github.com/AnthoVDO/Front_End_Mentor--Challenge/tree/master/loopstudios-landing-page-main",
-        "stack": "FrontEnd",
-        "technologie": [
-            "html",
-            "css3",
-            "javascript"
-        ]
-    }, 
+    },    
     // {
     //     "_id": {
     //         "$oid": "60f2b3373ee84d15d4fa057d"
@@ -239,21 +268,7 @@ const ProjectsPage = (props) => {
             "d3"
         ],
         "stack": "FrontEnd"
-    }, {
-        "_id": {
-            "$oid": "60f2b3373ee84d15d4fa0571"
-        },
-        "name": "Drum machine",
-        "description": "Drum machine made for FreeCodeCamp certification",
-        "use":"Drum machine made with React, we can turn it on/off, play piano, drum and Duke nukem sound (Video game character)",
-        "useLink":[],
-        "link": "https://drum-machine-react-freecodecamp-anthovdo.vercel.app/",
-        "github": "https://github.com/AnthoVDO/drum-machine-react-freecodecamp",
-        "technologie": [
-            "react"
-        ],
-        "stack": "FrontEnd"
-    }, 
+    },  
     // {
     //     "_id": {
     //         "$oid": "60f2b3373ee84d15d4fa0585"
@@ -301,20 +316,6 @@ const ProjectsPage = (props) => {
         "stack": "FrontEnd"
     }, {
         "_id": {
-            "$oid": "60f2b3373ee84d15d4fa057c"
-        },
-        "name": "Static job list",
-        "description": "Static job list made for Front end mentor challenge",
-        "use":"Job board made with React, allow to click on differents tags to filter the jobs",
-        "useLink":["./use/static-job-list001.png","./use/static-job-list002.png","./use/static-job-list003.png","./use/static-job-list004.png"],
-        "link": "https://static-job-list-in-react.vercel.app/",
-        "github": "https://github.com/AnthoVDO/Front_End_Mentor--Challenge/tree/master/static-job-listings-react",
-        "technologie": [
-            "react"
-        ],
-        "stack": "FrontEnd"
-    }, {
-        "_id": {
             "$oid": "60f2b3373ee84d15d4fa0583"
         },
         "name": "TimeStamp",
@@ -332,7 +333,7 @@ const ProjectsPage = (props) => {
     }, {
         "name": "ArchiProjectManager",
         "description": "ArchiProjectManager is a Saas that has been build to help Architects to manage theirs projects",
-        "use":"It has been build with C#/.Net Razor pages and Bootstrap. I'm working on it and there are thoses features: You can login, logout, create an account. While inside, you can create your clients, manage them with a CRUD. After that, you can create a project according to a client and then manage the project as you want. Both client and project dashboard have tool to find them like differents sorting, filter by word or filter by project phase.",
+        "use":"It has been build with C#/.Net Razor pages and Bootstrap. I'm working on it and there are those features: You can login, logout, create an account. While inside, you can create your clients, manage them with a CRUD. After that, you can create a project according to a client and then manage the project as you want. Both client and project dashboard have tool to find them like differents sorting, filter by word or filter by project phase.",
         "useLink":["./use/archiprojectmanager.png","./use/archiprojectmanager002.png","./use/archiprojectmanager003.png","./use/archiprojectmanager04.png","./use/archiprojectmanager05.png","./use/archiprojectmanager06.png","./use/archiprojectmanager07.png"],
         "link": "https://archiprojectmanager.azurewebsites.net/",
         "github": "https://github.com/AnthoVDO/ArchiProjectManager",
@@ -344,7 +345,8 @@ const ProjectsPage = (props) => {
         "stack": "Full"
     }]
 
-
+    const [frontEndNumber, setFrontEndNumber] = useState(false);
+    const [frontEnd, setFrontEnd] = useState(projects.slice(0, 8));
 
 
 
@@ -364,6 +366,7 @@ const ProjectsPage = (props) => {
                     <StackCard 
                     element={p}
                     addClass="ProjectPage-projects-items"
+                    key={"ProjectPage-projects-items"+p.use}
                     />
                     
                     )
@@ -379,13 +382,16 @@ const ProjectsPage = (props) => {
 
 
             {
-                projects.map(p=>{
+                
+
+                frontEnd.map(p=>{
                     if(p.stack==="FrontEnd"){
                        return( 
                         
                            <StackCard 
                     element={p}
                     addClass="ProjectPage-projects-items"
+                    key={"ProjectPage-projects-items"+p.use}
                     />
                     
                     
@@ -394,7 +400,19 @@ const ProjectsPage = (props) => {
                        return null
                     }
                 })
+                
             }
+            <div className="projectPage__fronte__btnContainer">
+            {frontEndNumber ? 
+            <button className="projectPage__frontend__expend" onClick={()=>{setFrontEnd(projects.slice(0, 8)); setFrontEndNumber(false)}}>
+            <BsArrowUp/>
+            Less
+            </button> 
+            : <button className="projectPage__frontend__expend" onClick={()=>{setFrontEnd(projects) ; setFrontEndNumber(true)}}>
+            <BsArrowDown/>
+            More
+            </button>}
+            </div>
 </div>
             <h2 className="ProjectsPage-subTitle"> Back end</h2>
             <div className="ProjectPage-projects">
@@ -409,6 +427,7 @@ const ProjectsPage = (props) => {
                            <StackCard 
                     element={p}
                     addClass="ProjectPage-projects-items"
+                    key={"ProjectPage-projects-items"+p.use}
                     />
                     
                     )

@@ -10,8 +10,11 @@ const Contact = () => {
     return (
         
         <div className="contact">
+        <h2 className="contact-title">
+            Contact me
+        </h2>
         <div className="contact__container">
-        <IconContext.Provider value={{ size:"2em", color:"#3c6e71"}} >
+        <IconContext.Provider value={{ size:"2em", color:"#EF8612"}} >
 
             <ul className="contact__container__list">
             <li className="contact__container__list__item"><a href="https://github.com/AnthoVDO" target="_blank" rel="noreferrer noopener"> <FaGithub/> </a></li>

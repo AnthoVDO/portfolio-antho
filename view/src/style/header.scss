@@ -7,14 +7,12 @@
 h1.header__description {
     display: block;
     text-align: center;
-    padding: 15px;
-    margin: 25px;
-    font-size: 1.5em;
+    font-size: 2em;
     border-left: 5px solid $backgroundColor;
     border-right: 5px solid $backgroundColor;
     border-radius: 40px 0px 40px 0px;
 }
 
 .header__description__name {
-    color: $primary;
+    color: $link;
 }

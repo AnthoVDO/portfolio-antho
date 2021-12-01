@@ -22,6 +22,7 @@
 
 .modal-item {
     height: initial !important;
+    position: relative;
 }
 
 .useImg {
@@ -41,7 +42,35 @@
 .modal-closeBtn {
     padding: 1em;
     border-radius: 15px;
-    background-color: rgb(148, 3, 3);
+    background-color: rgb(235, 15, 15);
     color: white;
     margin-top: 2em;
+    position: fixed;
+    right: 10%;
+    top: 50%;
+    cursor: pointer;
+}
+
+.modal__link {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 10%;
+    top: 75%;
+}
+
+.modal__useDescription {
+    background-color: $backgroundColor;
+    padding: 1em;
+    border-radius: 5px;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.modal__technologie {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 10%;
+    top: 20%;
 }

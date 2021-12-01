@@ -88,8 +88,8 @@ const Stack = () => {
                     href={element[1].href} 
                     alt={element[1].alt} 
                     src={element[1].src} 
-                    width='35px'
-                    height="35px"
+                    width='25px'
+                    height="25px"
                     key={element[1].alt+"reactKeyStack"}
 
                     />

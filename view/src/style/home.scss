@@ -1,8 +1,17 @@
 .home-mainProject {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 3em 0;
+}
+
+.home-mainProject-card {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-mainProject__item {
@@ -10,10 +19,22 @@
 }
 
 .home-h2 {
-    margin: 2em 2em 2.5em 2em;
+    margin: 0 2em 1em 2em;
     font-family: 'Genos', sans-serif;
     font-size: 1.7em;
     font-style: italic;
+    text-align: center;
+    letter-spacing: 2.7px;
+}
+
+.home-h2-logo {
+    display: block;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
 }
 
 .home-h2-stack {

@@ -6,7 +6,7 @@
 }
 
 .ProjectPage-projects-items {
-    width: 33%;
+    width: 25%;
     height: auto;
     margin-bottom: 4em;
 }
@@ -17,4 +17,27 @@
     width: 33%;
     padding-bottom: 0.5em;
     text-align: center;
+}
+
+.projectPage__fronte__btnContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectPage__frontend__expend {
+    background-color: $link;
+    color: $secondary;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 3px 10px;
+    cursor: pointer;
+    margin-top: 1em;
+    &:hover {
+        background-color: $secondary;
+        color: $link;
+    }
+    width: 33%;
+    font-size: 1.2em;
 }

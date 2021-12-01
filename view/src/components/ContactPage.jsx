@@ -14,7 +14,7 @@ const ContactPage = () => {
 
         <div className="contact-wrapper">
             <h3>Social</h3>
-            <IconContext.Provider value={{ size:"2em", color:"#3c6e71"}} >
+            <IconContext.Provider value={{ size:"2em", color:"#EF8612"}} >
 
             <ul className="contactPage__wrapper__social">
             <li className="contactPage__wrapper__social__item"><a href="https://github.com/AnthoVDO" target="_blank" rel="noreferrer noopener"> <FaGithub/> </a></li>
@@ -27,7 +27,7 @@ const ContactPage = () => {
         <div className="contact-wrapper">
             <h3>Email</h3>
             <div className="contactPage__items">
-            <IconContext.Provider value={{ size:"2em", color:"#3c6e71"}} >
+            <IconContext.Provider value={{ size:"2em", color:"#EF8612"}} >
             <BsEnvelopeFill/>
             </IconContext.Provider><a href="mailto:anthony.vdo@hotmail.be" > anthony.vdo@hotmail.be</a>
             </div>
@@ -35,7 +35,7 @@ const ContactPage = () => {
         <div className="contact-wrapper">
             <h3>Location</h3>
             <div className="contactPage__items">
-            <IconContext.Provider value={{ size:"2em", color:"#3c6e71"}} > 
+            <IconContext.Provider value={{ size:"2em", color:"#EF8612"}} > 
             <FaMapMarkedAlt/>     
             </IconContext.Provider><p>Namur, Belgium</p>
             </div>
