@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2em;
 }
 
 .home-mainProject__item {
@@ -52,10 +53,17 @@
 }
 
 .button {
-    margin: 1em 0;
+    margin: 2em 0;
     padding: 1em 1.5em;
     border-radius: 15px;
     background-color: #265A63;
     color: white;
     text-decoration: none;
+    svg {
+        vertical-align: middle;
+    }
+}
+
+.home__about__text {
+    text-align: center;
 }

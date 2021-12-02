@@ -230,7 +230,7 @@ const ProjectsPage = (props) => {
         },
         "name": "ExercicesTracker",
         "description": "Exercices tracker made for FreeCodeCamp Back end certification (check branch work4)",
-        "use":"1) Create a user by adding a username </br> 2) Take the id and add your exercice with a description, a time and a date </br> 3) Check the log by adding your Id to the Url",
+        "use":"1) Create a user by adding a username 2) Take the id and add your exercice with a description, a time and a date 3) Check the log by adding your Id to the Url",
         "useLink":["./use/exercices-tracker001.png","./use/exercices-tracker002.png","./use/exercices-tracker003.png","./use/exercices-tracker004.png","./use/exercices-tracker005.png","./use/exercices-tracker006.png"],
         "link": "https://fcc-api-ms-exercices-tracker.herokuapp.com/",
         "github": "https://github.com/AnthoVDO/boilerplate-project-exercisetracker/tree/work4",

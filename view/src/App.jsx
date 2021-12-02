@@ -7,7 +7,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  NavLink
 } from "react-router-dom";
 import React from 'react';
 
@@ -24,16 +24,16 @@ function App() {
       <nav className="navBar">
       <ul className="navBar-container">
       <li className="navBar-item">
-        <Link to="/">Home</Link>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li className="navBar-item">
-        <Link to="/projects">Projects</Link>
+        <NavLink to="/projects">Projects</NavLink>
       </li>
       <li className="navBar-item">
-        <Link to="/about">About</Link>
+        <NavLink to="/about">About</NavLink>
       </li>
       <li className="navBar-item">
-        <Link to="/contact">Contact</Link>
+        <NavLink to="/contact">Contact</NavLink>
       </li>
       </ul>
       

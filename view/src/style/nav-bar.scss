@@ -13,8 +13,23 @@
     justify-content: space-around;
     align-items: center;
     list-style-type: none;
+    padding: 1em;
 }
 
 .navBar-item a {
     color: $link;
+    text-decoration: none;
+    margin: 0 1em;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.active {
+    text-decoration: underline !important;
+    font-weight: bold;
+    border-left: 3px solid $link;
+    border-right: 3px solid $link;
+    border-radius: 20px 0px 20px 0px;
+    padding: 5px 10px;
 }

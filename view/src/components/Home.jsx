@@ -7,6 +7,8 @@ import {
   Link
 } from "react-router-dom";
 
+import {FaLongArrowAltRight} from 'react-icons/fa';
+
 const Home = (props)=>{
 
     const archiProjectManager = {
@@ -38,33 +40,38 @@ const Home = (props)=>{
       </span>
       
       </h2>
-      <Contact />
+     
       </div>
       
 
 
       <div className="home-mainProject">
+        <h2>My project</h2>
         <StackCard 
           element={archiProjectManager}
           addClass="home-mainProject-card"
           key={"home-mainProject archiprojecmanager"}
          />
          <div className="home-project">
-          <Link className="button" to="/projects">More projects</Link>
+          <Link className="button" to="/projects">See projects <FaLongArrowAltRight/></Link>
         </div>
       </div>
       
-      <p>
-        While working as a field technician, I falled in love with the code and started to learn it.
+      <h2>
+        About me
+      </h2>
+
+      <p className="home__about__text">
+        While working as a field technician, I falled in love with the code and started to learn it.<br/>
+        I learned it as a self taught with the help of mainly Free Code Camp.<br/>
+        I did several certification for frontend and backend
       </p>
-      <p>
-        I learned it as a self taught with the help of mainly Free Code Camp.
-      </p>
       
       
-      <Link className="button" to="/about">About</Link>
       
+      <Link className="button" to="/about">Learn more <FaLongArrowAltRight/></Link>
       
+       <Contact />
 </div>
     )
 }
