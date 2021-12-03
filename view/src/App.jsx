@@ -10,11 +10,12 @@ import {
   NavLink
 } from "react-router-dom";
 import React from 'react';
+import { useState } from 'react/cjs/react.development';
 
 
 function App() {
 
-  
+  const [activeHamburgerMenu, setActiveHamburgerMenu] = useState(false);
 
    
   return (
@@ -22,17 +23,18 @@ function App() {
     <div className="App" >
     
       <nav className="navBar">
-      <ul className="navBar-container">
-      <li className="navBar-item">
+      <span className={activeHamburgerMenu ? "hamburger__menu hamburger__menu--active" : "hamburger__menu "} onClick={()=>{setActiveHamburgerMenu(!activeHamburgerMenu)}}></span>
+      <ul className={activeHamburgerMenu ? "navBar-container openNav" : "navBar-container"}>
+      <li className="navBar-item" onClick={()=>{setActiveHamburgerMenu(false)}}>
         <NavLink to="/">Home</NavLink>
       </li>
-      <li className="navBar-item">
+      <li className="navBar-item" onClick={()=>{setActiveHamburgerMenu(false)}}>
         <NavLink to="/projects">Projects</NavLink>
       </li>
-      <li className="navBar-item">
+      <li className="navBar-item" onClick={()=>{setActiveHamburgerMenu(false)}}>
         <NavLink to="/about">About</NavLink>
       </li>
-      <li className="navBar-item">
+      <li className="navBar-item" onClick={()=>{setActiveHamburgerMenu(false)}}>
         <NavLink to="/contact">Contact</NavLink>
       </li>
       </ul>

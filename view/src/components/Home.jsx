@@ -1,6 +1,4 @@
 import React from "react";
-
-import Header from './Header';
 import Contact from './Contact';
 import StackCard from "./StackCard";
 import {
@@ -30,7 +28,10 @@ const Home = (props)=>{
       <div className="container" >
       <div className="top">
 
-      <Header/>
+      <div className="header">
+        <h1 className="header__description">Hello, I'm <span className="header__description__name" >Antho</span>, a web developper</h1>
+        
+        </div>
       <h2 className="home-h2">I'm building fullstack websites with
       <span className="home-h2-logo">
         <img src="/icons/react.svg" alt="React JS logo" width="25px" height="25px" className="home-h2-stack"/> 
@@ -53,7 +54,7 @@ const Home = (props)=>{
           key={"home-mainProject archiprojecmanager"}
          />
          <div className="home-project">
-          <Link className="button" to="/projects">See projects <FaLongArrowAltRight/></Link>
+          <Link className="button" to="/projects">More projects <FaLongArrowAltRight/></Link>
         </div>
       </div>
       
