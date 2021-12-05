@@ -1,0 +1,117 @@
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background-color: #265A63;
+}
+
+.navBar-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 1em;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.navBar-item {
+    margin: 0.5em;
+}
+
+.navBar-item a {
+    color: $link;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.active {
+    text-decoration: underline !important;
+    font-weight: bold;
+    border-left: 3px solid $link !important;
+    border-right: 3px solid $link !important;
+    border-radius: 20px 0px 20px 0px !important;
+    padding: 5px 10px;
+}
+
+// @media (max-width:720px) {
+//     .navBar-container {
+//         justify-content: flex-start;
+//     }
+// }
+// @media (max-width:600px) {
+//     .navBar-container {
+//         width: 70%;
+//     }
+// }
+@media (max-width:500px) {
+    .navBar-container {
+        left: -130%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        flex-direction: column;
+        background: rgba(12, 22, 29, 0.9);
+        width: 100vw;
+        height: 100vh;
+        transition: left 0.7s;
+        padding: 0;
+    }
+    .navBar-item a {
+        font-size: 1.2em;
+        background-color: #265A63;
+        padding: 10px 25px;
+        border-radius: 5px;
+    }
+    .hamburger__menu,
+    .hamburger__menu::before,
+    .hamburger__menu::after {
+        display: block;
+        background-color: white;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 3;
+        cursor: pointer;
+    }
+    .hamburger__menu {
+        right: 30px;
+        top: 35px;
+        width: 35px;
+    }
+    .hamburger__menu::before {
+        content: " ";
+        top: -10px;
+        right: 0;
+        width: 17.5px;
+    }
+    .hamburger__menu::after {
+        position: absolute;
+        content: " ";
+        top: 10px;
+        width: 17.5px;
+    }
+    .hamburger__menu--active {
+        transform: rotate(45deg);
+    }
+    .hamburger__menu--active::before {
+        transform: rotate(-90deg);
+        right: 9px;
+    }
+    .hamburger__menu--active::after {
+        transform: rotate(-90deg);
+        right: 9px;
+    }
+    .openNav {
+        left: 0 !important;
+        transition: left 0.7s ease-in-out;
+    }
+}

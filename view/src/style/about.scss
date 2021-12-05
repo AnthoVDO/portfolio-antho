@@ -1,9 +1,109 @@
 .about {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .about__description {
     padding: 25px;
     width: 80%;
     margin: 0 auto;
+}
+
+.about__top {
+    display: flex;
+    margin-bottom: 4em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.top__profilePicture {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .top__profilePicture__picture {
+        border-radius: 50%;
+        width: 240px;
+    }
+}
+
+.top__about {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.top__description,
+.top__certification {
+    padding: 1em 2em;
+}
+
+.about__subtitle {
+    margin-top: 1em;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.about_certification-list {
+    list-style-type: circle;
+    margin-left: 1.5em;
+    a {
+        color: $link;
+        font-weight: bold;
+    }
+}
+
+.about__stack__title {
+    font-size: 1em;
+}
+
+.about_skills {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    margin: 4em 1em;
+}
+
+.about__softskills {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0 2em;
+}
+
+.about__hardskills {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 0 2em;
+}
+
+
+/* Responsive */
+
+@media(max-width:750px) {
+    .top__about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about_skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about__softskills {
+        padding: 0;
+        text-align: justify;
+    }
+    .about__hardskills {
+        margin-top: 1em;
+        padding: 0;
+    }
 }

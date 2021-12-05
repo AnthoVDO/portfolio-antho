@@ -1,5 +1,5 @@
 .stack {
-    margin-top: 100px;
+    // margin-top: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -8,15 +8,15 @@
 }
 
 .stack__icon {
-    margin: 10px;
+    margin: 2px;
     padding: 10px;
     border-left: 5px solid $backgroundColor;
     border-right: 5px solid $backgroundColor;
     border-radius: 20px 0px 20px 0px;
     background-color: $third;
-    &:hover {
-        padding: 15px;
-        // transform: rotate(360deg);
-        transition: padding 0.3s ease-in-out, transform 0.3s ease-in-out;
-    }
+    // &:hover {
+    //     // padding: 15px;
+    //     // transform: rotate(360deg);
+    //     // transition: padding 0.3s ease-in-out, transform 0.3s ease-in-out;
+    // }
 }

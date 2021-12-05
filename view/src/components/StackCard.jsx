@@ -1,5 +1,9 @@
-import React from 'react';
 import Icon from './Icon.jsx';
+import ProjectModal from './ProjectModal.jsx';
+import React, {useState, useEffect} from 'react';
+import { FaGithub, FaLink } from 'react-icons/fa';
+import {BsFillInfoCircleFill} from 'react-icons/bs';
+import { IconContext } from "react-icons";
 
 const StackCard = (props) => {
 
@@ -7,25 +11,16 @@ const StackCard = (props) => {
 
         const vercel = /\.vercel\.app\//;
         const heroku = /\.herokuapp\.com\//;
+        const azure = /\.azurewebsites\.net\//;
         const https = /https:\/\//;
-        const path = e.replace(vercel, "").replace(heroku, "").replace(https, "");
+        const path = e.replace(vercel, "").replace(heroku, "").replace(https, "").replace(azure, "");
         return "./screenshot-small/"+path+".png"
     }
 
     const myClass = props.addClass
     const nestedClass = props.addClass+"__item"
 
-    /* Mouse hover the card */
-
-    const showTheCardInfo = (e) => {
-        const element = e.currentTarget.firstChild.querySelector(".project__stack__card__a");
-        element.className = "project__stack__card__a active"
-    }
-
-    const hiddeTheCardInfo = (e) => {
-        const element = e.currentTarget.firstChild.querySelector(".project__stack__card__a");
-        element.className = "project__stack__card__a"
-    } 
+    
     
     const path = "./icons/"
     const extension = ".svg"
@@ -79,52 +74,106 @@ const StackCard = (props) => {
             src:`${path}mongodb-icon${extension}`,
             alt: "mongodb logo",
             href:"https://www.mongodb.com/"
-        },
+        },csharp:{
+            src:`${path}csharp${extension}`,
+            alt:"c sharp logo",
+            href:"https://docs.microsoft.com/en-us/dotnet/csharp/"
+        }, dotnet:{
+            src:`${path}dotnet${extension}`,
+            alt:"dotnet logo",
+            href:"https://dotnet.microsoft.com/"
+        }
     }
 
-    //    console.log(props.element.technologie)
+    const [modalShow, setModalShow] = useState(false);
+
+    useEffect(() => {
+        if(modalShow){
+            document.body.style.overflow = 'hidden'
+        }else{
+            document.body.style.overflow = 'scroll';
+        }
+    }, [modalShow])
+    
+    
        
     
 
 
     return (
-        <div className={myClass} onMouseEnter={showTheCardInfo} onMouseLeave={hiddeTheCardInfo}>
-        <div className={nestedClass}>
+        <div className={myClass} >
+        <div className={nestedClass+" project__stack__card__item"}>
         
-
-        <h4 className="project__stack__card__name">{props.element.name}</h4>
-        <img 
-        src={cleanUrlToGetTheScreenShot(props.element.link)} 
-        alt="" 
-        className="item__preview"  
-        />
-        <h5 className="project__stack__card__technologie">{
-            
-            Object.entries(props.element.technologie).map(element=>{
+            <div className="project__stack__card__header">
+                <div className="project__stack__card__name">
+                    <span className="project__stack__card__name-red">*</span>
+                    <span className="project__stack__card__name-orange">*</span>
+                    <span className="project__stack__card__name-green">*</span>
+                    <h4 className="project__stack__card__name-title">{props.element.name}</h4> 
+                </div>
                 
-              return (
-                  <Icon 
-                  href={stackList[element[1]].href} 
-                  alt={stackList[element[1]].alt} 
-                  src={stackList[element[1]].src}
-                  width="20px"
-                  height="20px"
-                  key={stackList[element[1]].alt+"reactKeyStack"+props.element.name}
+
+                <span className="project__stack__card__technologie">{
+                    
+                    Object.entries(props.element.technologie).map(element=>{
+                        
+                    return (
+                        <Icon 
+                        href={stackList[element[1]].href} 
+                        alt={stackList[element[1]].alt} 
+                        src={stackList[element[1]].src}
+                        width="20px"
+                        height="20px"
+                        key={stackList[element[1]].alt+"reactKeyStack"+props.element.name+myClass}
 
 
-                  />
-              )
-              
-            })
-            }</h5>
-
-        <div className="project__stack__card__a">
+                        />
+                    )
+                    
+                    })
+                    }
+                </span>
+            </div>
+            <img 
+            src={cleanUrlToGetTheScreenShot(props.element.link)} 
+            alt="" 
+            className="item__preview"  
+            
+            />
+       
             <p className="project__stack__card__description">{props.element.description}</p>
-            <a href={props.element.link} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__link">Link</a>
-            <a href={props.element.github} target="_blank" rel="noreferrer noopener"  className="project__stack__card__a__github">Github</a>
-        </div>
+            <IconContext.Provider value={{ size:"20px", color:"#EF8612"}} >
+            <div className="project__stack__card__a">
+                <a href={props.element.link} target="_blank" rel="noreferrer noopener"  className="stackCard__Btn">
+
+                <FaLink/>
+                </a>
+                <a href={props.element.github} target="_blank" rel="noreferrer noopener"  className="stackCard__Btn">
+
+                <FaGithub/>
+                </a>
+                <button className="stackCard__Btn" onClick={()=>{setModalShow(true)}}>
+
+                <BsFillInfoCircleFill/>
+                </button>
+            </div>
+            </IconContext.Provider >
 
         </div>
+        < ProjectModal modalShow={modalShow}
+        onClose={()=>{setModalShow(false)}}
+        title={props.element.name}
+        description={props.element.description}
+        use={props.element.use}
+        useLink={props.element.useLink}
+        link={props.element.link}
+        github={props.element.github}
+        technologie={props.element.technologie}
+        stack={props.element.stack}
+        img={cleanUrlToGetTheScreenShot(props.element.link)}
+        key={"modalKey:"+props.element.name}
+            
+         />
         </div>
     );
 };

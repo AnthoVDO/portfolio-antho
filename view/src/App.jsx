@@ -1,32 +1,67 @@
 import './style/router.scss';
-import Stack from "./components/Stack";
-import Header from './components/Header';
-import Projects from './components/Projects';
 import About from './components/About';
-import Contact from './components/Contact';
+import Home from './components/Home';
+import ProjectsPage from './components/ProjectsPage';
+import ContactPage from './components/ContactPage';
+import CV from './components/CV';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink
+} from "react-router-dom";
+import React from 'react';
+import { useState } from 'react/cjs/react.development';
+
+
 
 function App() {
 
-  
+  const [activeHamburgerMenu, setActiveHamburgerMenu] = useState(false);
 
+   
   return (
+    <Router>
     <div className="App" >
-    <div className="container" >
-      <div className="top">
-      <Header/>
-      <div className="top__profilePicture">
-        <img src="./img/anthoVDO.jpg" alt="antho's profile"  className="top__profilePicture__picture"/>
-      </div>
-      <Contact />
-      </div>
+    
+      <nav className="navBar">
+      <span className={activeHamburgerMenu ? "hamburger__menu hamburger__menu--active" : "hamburger__menu "} onClick={()=>{setActiveHamburgerMenu(!activeHamburgerMenu)}}></span>
+      <ul className={activeHamburgerMenu ? "navBar-container openNav" : "navBar-container"}>
+      <li className="navBar-item" onClick={()=>{setActiveHamburgerMenu(false)}}>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li className="navBar-item" onClick={()=>{setActiveHamburgerMenu(false)}}>
+        <NavLink to="/projects">Projects</NavLink>
+      </li>
+      <li className="navBar-item" onClick={()=>{setActiveHamburgerMenu(false)}}>
+        <NavLink to="/about">About</NavLink>
+      </li>
+      <li className="navBar-item" onClick={()=>{setActiveHamburgerMenu(false)}}>
+        <NavLink to="/contact">Contact</NavLink>
+      </li>
+      {/* <li className="navBar-item navBar-cv" onClick={()=>{setActiveHamburgerMenu(false)}}>
+        <a href="/CV" >Download CV</a>
+      </li> */}
+      </ul>
+      <ul>
+        
+      </ul>
+
       
-      <Stack />
-      <About />
-      <Projects />
       
-      
+      </nav>
+    
+    <Routes>
+      <Route path="/projects" element={<ProjectsPage/>}/>
+      <Route path="/about" element={<About/>}/>
+      <Route path="/contact" element={<ContactPage/>}/>
+      <Route path="/CV" element={<CV/>}/>
+
+      <Route path="/" element={<Home/>}/>
+    </Routes>
+    
     </div>
-    </div>
+    </Router>
   );
 }
 
