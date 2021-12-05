@@ -1,5 +1,4 @@
 import React from "react";
-import TitleToShow from "./TitleToShow";
 import Stack from "./Stack";
 
 const About = () => {
@@ -9,7 +8,7 @@ const About = () => {
       
       
     <div className="about">
-      <TitleToShow specialClass="about__title" text="About" />
+      <h3 className="pageTitle">About</h3>
       <div className="about__description">
       
       
@@ -19,7 +18,9 @@ const About = () => {
         <div className="top__profilePicture">
           <img src="./img/anthoVDO.jpg" alt="antho's profile"  className="top__profilePicture__picture"/>
         </div>
+        <div className="top__about">
 
+        
         <div className="top__description">
           <h4 className="about__subtitle">My work</h4>
           <p>
@@ -43,7 +44,7 @@ const About = () => {
             <li className="about__certification-item"><a href="https://www.udemy.com/certificate/UC-4cdc0d83-6f14-4e59-9153-dacaf5a56cb6/" target="_blank" rel="noopener noreferrer">Développeur C# | Formation complète 2021</a></li>
           </ul>
         </div>
-        
+        </div>
       </div>
 
       <Stack />

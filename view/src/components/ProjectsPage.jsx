@@ -353,7 +353,7 @@ const ProjectsPage = (props) => {
     return (
         <div className="container" >
             
-            <h1 className="ProjectsPage-title">Projects</h1>
+            <h1 className="pageTitle">Projects</h1>
             <h2 className="ProjectsPage-subTitle">Full Stack</h2>
             <div className="ProjectPage-projects">
 

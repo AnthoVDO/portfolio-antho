@@ -8,8 +8,11 @@ import { IconContext } from "react-icons";
 const ContactPage = () => {
     return (
         <div className="container" >
+        <div className="contactPage__Wrapper">
+
+        <h1 className="pageTitle">Contact me</h1>
         <h2 className="contactPageSubTitle">Get in touch</h2>
-        <h1 className="contactPageTitle">Contact me</h1>
+        
         <div className="contact-container">
 
         <div className="contact-wrapper">
@@ -41,7 +44,7 @@ const ContactPage = () => {
             </div>
         </div>
 
-          
+        </div>
         </div>
         </div>
     );

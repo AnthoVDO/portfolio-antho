@@ -1,5 +1,9 @@
 .about {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .about__description {
@@ -9,15 +13,16 @@
 }
 
 .about__top {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
     margin-bottom: 4em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .top__profilePicture {
-    grid-column: 1 / 3;
-    grid-row: 1/2;
     width: 100%;
     display: flex;
     align-items: center;
@@ -28,16 +33,14 @@
     }
 }
 
-.top__description {
-    grid-column: 1 / 2;
-    grid-row: 2/3;
-    padding: 0.5em 2em;
+.top__about {
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
+.top__description,
 .top__certification {
-    grid-column: 2 / 3;
-    grid-row: 2/3;
-    padding: 0.5em 2em;
+    padding: 1em 2em;
 }
 
 .about__subtitle {
@@ -82,4 +85,25 @@
 
 /* Responsive */
 
-@media(max-width:780px) {}
+@media(max-width:750px) {
+    .top__about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about_skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about__softskills {
+        padding: 0;
+        text-align: justify;
+    }
+    .about__hardskills {
+        margin-top: 1em;
+        padding: 0;
+    }
+}

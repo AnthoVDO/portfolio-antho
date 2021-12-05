@@ -3,6 +3,7 @@ import About from './components/About';
 import Home from './components/Home';
 import ProjectsPage from './components/ProjectsPage';
 import ContactPage from './components/ContactPage';
+import CV from './components/CV';
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,6 +12,7 @@ import {
 } from "react-router-dom";
 import React from 'react';
 import { useState } from 'react/cjs/react.development';
+
 
 
 function App() {
@@ -37,7 +39,14 @@ function App() {
       <li className="navBar-item" onClick={()=>{setActiveHamburgerMenu(false)}}>
         <NavLink to="/contact">Contact</NavLink>
       </li>
+      {/* <li className="navBar-item navBar-cv" onClick={()=>{setActiveHamburgerMenu(false)}}>
+        <a href="/CV" >Download CV</a>
+      </li> */}
       </ul>
+      <ul>
+        
+      </ul>
+
       
       
       </nav>
@@ -46,6 +55,7 @@ function App() {
       <Route path="/projects" element={<ProjectsPage/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/contact" element={<ContactPage/>}/>
+      <Route path="/CV" element={<CV/>}/>
 
       <Route path="/" element={<Home/>}/>
     </Routes>
