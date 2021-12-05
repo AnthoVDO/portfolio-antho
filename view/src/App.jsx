@@ -5,7 +5,7 @@ import ProjectsPage from './components/ProjectsPage';
 import ContactPage from './components/ContactPage';
 import CV from './components/CV';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   NavLink
