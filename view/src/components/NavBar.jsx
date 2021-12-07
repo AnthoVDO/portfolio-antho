@@ -13,8 +13,15 @@ const NavBar = () => {
     return (
 
         <>
-        <nav className="navBar">
-      <span className={activeHamburgerMenu ? "hamburger__menu hamburger__menu--active" : "hamburger__menu "} onClick={()=>{setActiveHamburgerMenu(!activeHamburgerMenu)}}></span>
+      
+      <nav className="navBar">
+
+      <div onClick={()=>{setActiveHamburgerMenu(!activeHamburgerMenu)}}>
+        <span className={activeHamburgerMenu ? "hamburger__menu hamburger__menu--active" : "hamburger__menu "} ></span>
+      </div>
+      
+
+
       <ul className={activeHamburgerMenu ? "navBar-container openNav" : "navBar-container"}>
       <li className="navBar-item" onClick={()=>{setActiveHamburgerMenu(false)}}>
         <Link to="/">Home</Link>
