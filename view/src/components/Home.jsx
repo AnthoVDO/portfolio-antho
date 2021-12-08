@@ -29,7 +29,7 @@ const Home = (props)=>{
       <div className="top">
 
       <div className="header">
-        <h1 className="header__description">Hello, I'm <span className="header__description__name" >Antho</span>, a web developper</h1>
+        <h1 className="header__description">Hello, I'm <span className="header__description__name" >Antho</span>, a web developer</h1>
         
         </div>
       <h2 className="home-h2">I'm building fullstack websites with
