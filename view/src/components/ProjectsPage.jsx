@@ -343,6 +343,19 @@ const ProjectsPage = (props) => {
             "dotnet"
         ],
         "stack": "Full"
+    }, {
+        "name": "Pizza Pito",
+        "description": "Pizza Pito is a simple website for a pizzeria",
+        "use":"It has been build with C#/.Net Razor pages and Bootstrap. It have a landing page and a pizza page in front. And the owner have an admin page which allow him to add and remove pizza easily.",
+        "useLink":["./use/pizzaPito001.png","./use/pizzaPito002.png","./use/pizzaPito003.png","./use/pizzaPito004.png","./use/pizzaPito005.png","./use/pizzaPito006.png","./use/pizzaPito007.png"],
+        "link": "https://pizza-pito.azurewebsites.net/",
+        "github": "https://github.com/AnthoVDO/Pizza-Pito",
+        "technologie": [
+            "bootstrap",
+            "csharp",
+            "dotnet"
+        ],
+        "stack": "Full"
     }]
 
     const [frontEndNumber, setFrontEndNumber] = useState(false);
